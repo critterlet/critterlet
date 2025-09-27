@@ -25,7 +25,7 @@
     body {
       font-family: 'Switzal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: linear-gradient(135deg, #F0EAE7, #FFF8E7);
-      color: #2D3748;
+      color: #3E2723;
       line-height: 1.6;
     }
     
@@ -52,24 +52,6 @@
       }
     }
     
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-    
-    @keyframes glow {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
-      }
-    }
-    
     @keyframes float {
       0%, 100% {
         transform: translateY(0px);
@@ -83,7 +65,7 @@
     .header {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid #E2E8F0;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -102,14 +84,15 @@
     .back-link {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #8B6E4E;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
       transition: all 0.3s ease;
       animation: slideInLeft 0.8s ease-out;
+      font-size: 18px;
     }
     
     .back-link:hover {
@@ -119,15 +102,15 @@
     
     .nav {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
     }
     
     .nav a {
-      color: #4A5568;
+      color: #5D4037;
       text-decoration: none;
       font-weight: 500;
-      font-size: 15px;
-      padding: 8px 16px;
+      font-size: 18px;
+      padding: 10px 18px;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
@@ -139,39 +122,38 @@
     }
     
     .nav a.active {
-      background: linear-gradient(135deg, #FFB6C1, #AEDCB5);
+      background: #8B6E4E;
       color: white;
-      animation: glow 2s ease-in-out infinite;
     }
     
     /* Main Content */
     .main-content {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 60px 2rem;
+      padding: 80px 2rem;
     }
     
     .page-header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       animation: fadeInUp 1s ease-out;
     }
     
     .page-title {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 800;
       background: linear-gradient(135deg, #8B6E4E, #FFB6C1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     
     .page-subtitle {
-      font-size: 20px;
-      color: #4A5568;
-      margin-bottom: 32px;
-      max-width: 600px;
+      font-size: 24px;
+      color: #5D4037;
+      margin-bottom: 40px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       animation: fadeInUp 1s ease-out 0.2s both;
@@ -180,19 +162,19 @@
     .features-preview {
       display: flex;
       justify-content: center;
-      gap: 32px;
+      gap: 40px;
       flex-wrap: wrap;
-      margin-bottom: 48px;
+      margin-bottom: 60px;
       animation: fadeInUp 1s ease-out 0.4s both;
     }
     
     .feature-highlight {
       background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       text-align: center;
-      min-width: 200px;
+      min-width: 220px;
       animation: float 3s ease-in-out infinite;
     }
     
@@ -205,38 +187,40 @@
     }
     
     .feature-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
-      animation: pulse 2s ease-in-out infinite;
+      font-size: 40px;
+      margin-bottom: 15px;
     }
     
     .feature-highlight h3 {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 600;
-      color: #2D3748;
-      margin-bottom: 8px;
+      color: #3E2723;
+      margin-bottom: 10px;
     }
     
     .feature-highlight p {
-      font-size: 14px;
-      color: #4A5568;
+      font-size: 16px;
+      color: #5D4037;
     }
     
     /* Pricing Cards */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-      margin-bottom: 60px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 80px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .pricing-card {
       background: white;
-      border-radius: 20px;
-      padding: 40px 32px;
+      border-radius: 25px;
+      padding: 50px 40px;
       text-align: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      border: 2px solid transparent;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 3px solid transparent;
       transition: all 0.3s ease;
       position: relative;
       animation: fadeInUp 1s ease-out forwards;
@@ -247,38 +231,37 @@
     .pricing-card:nth-child(3) { animation-delay: 0.5s; }
     
     .pricing-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     }
     
     .pricing-card.popular {
       border-color: #FFB6C1;
-      animation: glow 3s ease-in-out infinite;
+      transform: scale(1.05);
     }
     
     .popular-badge {
       position: absolute;
-      top: -12px;
+      top: -15px;
       left: 50%;
       transform: translateX(-50%);
       background: linear-gradient(135deg, #FFB6C1, #FF9FAB);
       color: white;
-      padding: 8px 24px;
-      border-radius: 20px;
-      font-size: 14px;
+      padding: 10px 30px;
+      border-radius: 25px;
+      font-size: 16px;
       font-weight: 600;
-      animation: pulse 2s ease-in-out infinite;
     }
     
     .plan-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 20px;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 25px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
+      font-size: 45px;
       animation: float 4s ease-in-out infinite;
     }
     
@@ -295,16 +278,16 @@
     }
     
     .plan-name {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 8px;
+      color: #3E2723;
+      margin-bottom: 12px;
     }
     
     .plan-price {
-      font-size: 36px;
+      font-size: 44px;
       font-weight: 800;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     
     .monthly .plan-price {
@@ -320,43 +303,43 @@
     }
     
     .plan-billing {
-      font-size: 14px;
+      font-size: 16px;
       color: #718096;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
     
     .savings-badge {
       background: #AEDCB5;
       color: white;
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 12px;
+      padding: 6px 15px;
+      border-radius: 15px;
+      font-size: 14px;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
       display: inline-block;
     }
     
     .features-list {
       text-align: left;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
     
     .feature-item {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      padding: 8px 0;
+      gap: 15px;
+      margin-bottom: 15px;
+      padding: 10px 0;
     }
     
     .feature-check {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       color: white;
       flex-shrink: 0;
@@ -375,17 +358,17 @@
     }
     
     .feature-text {
-      font-size: 15px;
-      color: #2D3748;
+      font-size: 18px;
+      color: #3E2723;
     }
     
     .cta-button {
       width: 100%;
-      padding: 16px 24px;
-      border-radius: 12px;
+      padding: 20px 30px;
+      border-radius: 15px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
       transition: all 0.3s ease;
       display: inline-block;
       color: white;
@@ -404,31 +387,33 @@
     }
     
     .cta-button:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
     
     /* FAQ Section */
     .faq-section {
       background: white;
-      border-radius: 20px;
-      padding: 48px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-radius: 25px;
+      padding: 60px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
       animation: fadeInUp 1s ease-out 0.8s both;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     
     .faq-title {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
-      color: #2D3748;
+      color: #3E2723;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
     
     .faq-item {
-      margin-bottom: 24px;
-      border-bottom: 1px solid #E2E8F0;
-      padding-bottom: 24px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #F0EAE7;
+      padding-bottom: 30px;
     }
     
     .faq-item:last-child {
@@ -437,66 +422,67 @@
     }
     
     .faq-question {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 600;
-      color: #2D3748;
-      margin-bottom: 12px;
+      color: #3E2723;
+      margin-bottom: 15px;
     }
     
     .faq-answer {
-      color: #4A5568;
+      color: #5D4037;
       line-height: 1.6;
+      font-size: 18px;
     }
     
     /* Contact Section */
     .contact-section {
       background: linear-gradient(135deg, #F7FAFC, #FFF8E7);
-      border-radius: 16px;
-      padding: 40px;
+      border-radius: 20px;
+      padding: 50px;
       text-align: center;
-      margin-top: 48px;
+      margin-top: 60px;
       animation: fadeInUp 1s ease-out 1s both;
     }
     
     .contact-section h3 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 16px;
+      color: #3E2723;
+      margin-bottom: 20px;
     }
     
     .contact-section p {
-      color: #4A5568;
-      margin-bottom: 24px;
-      font-size: 16px;
+      color: #5D4037;
+      margin-bottom: 30px;
+      font-size: 20px;
     }
     
     .contact-email {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       background: linear-gradient(135deg, #8B6E4E, #785F44);
       color: white;
-      padding: 14px 28px;
-      border-radius: 12px;
+      padding: 18px 35px;
+      border-radius: 15px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 20px;
       transition: all 0.3s ease;
     }
     
     .contact-email:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(139, 110, 78, 0.4);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 35px rgba(139, 110, 78, 0.4);
     }
     
     /* Footer */
     .footer {
-      background: #2D3748;
+      background: #3E2723;
       color: white;
-      padding: 32px 0;
+      padding: 40px 0;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
     }
     
     .footer-content {
@@ -508,8 +494,8 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 32px;
-      margin-bottom: 20px;
+      gap: 40px;
+      margin-bottom: 25px;
       flex-wrap: wrap;
     }
     
@@ -519,8 +505,9 @@
       opacity: 0.7;
       font-weight: 500;
       transition: all 0.3s ease;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 8px;
+      font-size: 18px;
     }
     
     .footer-links a:hover {
@@ -531,15 +518,27 @@
     
     .footer-bottom {
       opacity: 0.5;
-      font-size: 14px;
+      font-size: 16px;
     }
     
     /* Responsive */
+    @media (max-width: 1024px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 500px;
+      }
+      
+      .pricing-card.popular {
+        transform: none;
+      }
+    }
+    
     @media (max-width: 768px) {
       .header-content {
         padding: 0 1rem;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
       }
       
       .nav {
@@ -547,30 +546,25 @@
       }
       
       .main-content {
-        padding: 40px 1rem;
+        padding: 50px 1rem;
       }
       
       .page-title {
-        font-size: 36px;
-      }
-      
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        font-size: 42px;
       }
       
       .features-preview {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
       
       .faq-section {
-        padding: 32px 24px;
+        padding: 40px 30px;
       }
       
       .footer-links {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
     }
   </style>
@@ -610,7 +604,7 @@
         </div>
         <div class="feature-highlight">
           <div class="feature-icon">📊</div>
-        <h3>Advanced Analytics</h3>
+          <h3>Advanced Analytics</h3>
           <p>Track your progress deeply</p>
         </div>
       </div>
@@ -756,7 +750,7 @@
       
       <div class="faq-item">
         <h3 class="faq-question">What's the difference between plans?</h3>
-        <p class="faq-answer">All plans include the same premium features. Monthly is $4.99/month, Yearly saves you 33% at $39.99/year, and Lifetime is a one-time $99.99 payment with no recurring charges.</p>
+       <p class="faq-answer">All plans include the same premium features. Monthly is $4.99/month, Yearly saves you 33% at $39.99/year, and Lifetime is a one-time $99.99 payment with no recurring charges.</p>
       </div>
       
       <div class="faq-item">

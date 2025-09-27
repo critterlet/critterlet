@@ -25,7 +25,7 @@
     body {
       font-family: 'Switzal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #FAFBFC;
-      color: #2D3748;
+      color: #3E2723;
       line-height: 1.6;
     }
     
@@ -63,30 +63,12 @@
       }
     }
     
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-    
     @keyframes float {
       0%, 100% {
         transform: translateY(0px);
       }
       50% {
         transform: translateY(-10px);
-      }
-    }
-    
-    @keyframes glow {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
       }
     }
     
@@ -102,7 +84,7 @@
     .header {
       background: white;
       border-bottom: 1px solid #E2E8F0;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -122,17 +104,17 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
       text-decoration: none;
       color: inherit;
       animation: slideInLeft 0.8s ease-out;
     }
     
     .logo-icon {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       background: url('critterletlogo1.png') center/cover;
-      border-radius: 8px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -140,24 +122,24 @@
     }
     
     .logo-text {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
-      color: #2D3748;
+      color: #3E2723;
     }
     
     .nav {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       animation: slideInRight 0.8s ease-out;
     }
     
     .nav a {
-      color: #4A5568;
+      color: #5D4037;
       text-decoration: none;
       font-weight: 500;
-      font-size: 15px;
+      font-size: 18px;
       transition: all 0.3s ease;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
     }
     
@@ -171,7 +153,7 @@
     .hero {
       background: linear-gradient(135deg, #8B6E4E 0%, #5A4A3A 100%);
       color: white;
-      padding: 80px 0;
+      padding: 100px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -189,7 +171,7 @@
     }
     
     .hero-content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0 2rem;
       position: relative;
@@ -197,18 +179,18 @@
     }
     
     .hero h1 {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 800;
       line-height: 1.1;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       animation: fadeInUp 1s ease-out;
     }
     
     .hero p {
-      font-size: 20px;
+      font-size: 24px;
       opacity: 0.9;
-      margin-bottom: 40px;
-      max-width: 600px;
+      margin-bottom: 50px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       animation: fadeInUp 1s ease-out 0.2s both;
@@ -216,37 +198,36 @@
     
     .cta-buttons {
       display: flex;
-      gap: 16px;
+      gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
       animation: fadeInUp 1s ease-out 0.4s both;
     }
     
     .btn {
-      padding: 14px 24px;
-      border-radius: 8px;
+      padding: 18px 32px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 18px;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
     
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
     
     .btn-primary {
       background: white;
-      color: #8B6E4E;
-      animation: glow 2s ease-in-out infinite;
+      color: #3E2723;
     }
     
     .btn-primary:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
     
     .btn-secondary {
@@ -257,12 +238,12 @@
     
     .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
     
     /* App Preview Section */
     .app-preview {
-      padding: 80px 0;
+      padding: 100px 0;
       background: white;
       overflow: hidden;
     }
@@ -276,7 +257,7 @@
     .app-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 100px;
       align-items: center;
     }
     
@@ -285,32 +266,32 @@
     }
     
     .app-info h2 {
-      font-size: 36px;
+      font-size: 44px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 24px;
+      color: #3E2723;
+      margin-bottom: 28px;
       line-height: 1.2;
     }
     
     .app-info p {
-      font-size: 18px;
-      color: #4A5568;
-      margin-bottom: 32px;
+      font-size: 22px;
+      color: #5D4037;
+      margin-bottom: 36px;
       line-height: 1.6;
     }
     
     .features {
       list-style: none;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
     
     .features li {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 16px;
-      color: #2D3748;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-size: 20px;
+      color: #3E2723;
       opacity: 0;
       animation: fadeInUp 0.6s ease-out forwards;
     }
@@ -321,17 +302,16 @@
     .features li:nth-child(4) { animation-delay: 0.4s; }
     
     .check {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       background: #AEDCB5;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
-      animation: pulse 2s ease-in-out infinite;
     }
     
     .app-visual {
@@ -340,22 +320,22 @@
     }
     
     .phone-mockup {
-      width: 280px;
-      height: 560px;
+      width: 320px;
+      height: 640px;
       background: linear-gradient(135deg, #F7FAFC, #EDF2F7);
-      border-radius: 40px;
+      border-radius: 50px;
       margin: 0 auto;
-      padding: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
       position: relative;
-      border: 8px solid #2D3748;
+      border: 10px solid #3E2723;
       animation: float 4s ease-in-out infinite;
     }
     
     .phone-screen {
       width: 100%;
       height: 100%;
-      border-radius: 24px;
+      border-radius: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -406,47 +386,46 @@
     }
     
     .critter-icon {
-      font-size: 48px;
-      margin-bottom: 12px;
-      animation: pulse 2s ease-in-out infinite;
+      font-size: 60px;
+      margin-bottom: 16px;
     }
     
     .app-name {
-      font-size: 18px;
-      margin-bottom: 4px;
+      font-size: 22px;
+      margin-bottom: 8px;
     }
     
     .app-tagline {
-      font-size: 12px;
+      font-size: 16px;
       opacity: 0.8;
     }
     
     /* Download Section */
     .download {
-      padding: 80px 0;
+      padding: 100px 0;
       background: #F7FAFC;
       text-align: center;
     }
     
     .download h2 {
-      font-size: 36px;
+      font-size: 44px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 16px;
+      color: #3E2723;
+      margin-bottom: 20px;
       animation: fadeInUp 1s ease-out;
     }
     
     .download p {
-      font-size: 18px;
-      color: #4A5568;
-      margin-bottom: 48px;
+      font-size: 22px;
+      color: #5D4037;
+      margin-bottom: 60px;
       animation: fadeInUp 1s ease-out 0.2s both;
     }
     
     .download-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 100px;
       align-items: center;
       max-width: 1000px;
       margin: 0 auto;
@@ -455,7 +434,7 @@
     .download-buttons {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
       align-items: center;
       animation: slideInLeft 1s ease-out 0.4s both;
     }
@@ -463,101 +442,99 @@
     .app-store-btn {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       background: #000;
       color: white;
-      padding: 16px 24px;
-      border-radius: 12px;
+      padding: 20px 30px;
+      border-radius: 15px;
       text-decoration: none;
       transition: all 0.3s ease;
-      min-width: 200px;
+      min-width: 220px;
     }
     
     .app-store-btn:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     
     .store-icon {
-      font-size: 24px;
+      font-size: 28px;
     }
     
     .store-text small {
       display: block;
-      font-size: 12px;
+      font-size: 14px;
       opacity: 0.7;
     }
     
     .store-text strong {
       display: block;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
     }
     
     .coming-soon {
-      font-size: 14px;
+      font-size: 18px;
       color: #718096;
-      margin-top: 8px;
-      animation: pulse 2s ease-in-out infinite;
+      margin-top: 12px;
     }
     
     .qr-section {
       background: white;
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      max-width: 280px;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      max-width: 320px;
       margin: 0 auto;
       animation: slideInRight 1s ease-out 0.4s both;
     }
     
     .qr-code {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       background: #F7FAFC;
       border: 2px solid #E2E8F0;
-      border-radius: 12px;
-      margin: 0 auto 16px;
+      border-radius: 15px;
+      margin: 0 auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 18px;
       color: #718096;
       text-align: center;
-      animation: glow 3s ease-in-out infinite;
     }
     
     .qr-section h3 {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 600;
-      color: #2D3748;
-      margin-bottom: 8px;
+      color: #3E2723;
+      margin-bottom: 12px;
     }
     
     .qr-section p {
-      font-size: 14px;
-      color: #718096;
+      font-size: 18px;
+      color: #5D4037;
     }
     
     /* Policy Cards Section */
     .policies {
-      padding: 80px 0;
+      padding: 100px 0;
       background: white;
     }
     
     .policies h2 {
-      font-size: 36px;
+      font-size: 44px;
       font-weight: 700;
-      color: #2D3748;
+      color: #3E2723;
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 60px;
       animation: fadeInUp 1s ease-out;
     }
     
     .policy-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 32px;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -565,8 +542,8 @@
     .policy-card {
       background: #F7FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 32px;
+      border-radius: 20px;
+      padding: 40px;
       text-decoration: none;
       color: inherit;
       transition: all 0.3s ease;
@@ -578,51 +555,52 @@
     .policy-card:nth-child(3) { animation-delay: 0.3s; }
     
     .policy-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
       background: white;
     }
     
     .policy-icon {
-      width: 48px;
-      height: 48px;
+      width: 60px;
+      height: 60px;
       background: linear-gradient(135deg, #FFB6C1, #AEDCB5);
-      border-radius: 12px;
+      border-radius: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 30px;
+      margin-bottom: 24px;
       animation: float 3s ease-in-out infinite;
     }
     
     .policy-card h3 {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 600;
-      color: #2D3748;
-      margin-bottom: 12px;
+      color: #3E2723;
+      margin-bottom: 16px;
     }
     
     .policy-card p {
-      color: #4A5568;
+      color: #5D4037;
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      font-size: 18px;
     }
     
     .policy-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #8B6E4E;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 18px;
     }
     
     /* Footer */
     .footer {
-      background: #2D3748;
+      background: #3E2723;
       color: white;
-      padding: 48px 0 32px;
+      padding: 60px 0 40px;
       text-align: center;
     }
     
@@ -633,26 +611,26 @@
     }
     
     .footer-brand {
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       animation: fadeInUp 1s ease-out;
     }
     
     .footer-brand h3 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     
     .footer-brand p {
       opacity: 0.7;
-      font-size: 16px;
+      font-size: 20px;
     }
     
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 32px;
-      margin-bottom: 32px;
+      gap: 40px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
       animation: fadeInUp 1s ease-out 0.2s both;
     }
@@ -663,8 +641,9 @@
       opacity: 0.7;
       font-weight: 500;
       transition: all 0.3s ease;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 8px;
+      font-size: 18px;
     }
     
     .footer-links a:hover {
@@ -675,31 +654,31 @@
     
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 24px;
+      padding-top: 30px;
       opacity: 0.5;
-      font-size: 14px;
+      font-size: 16px;
       animation: fadeInUp 1s ease-out 0.4s both;
     }
     
     /* Responsive */
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 36px;
+        font-size: 42px;
       }
       
       .hero p {
-        font-size: 18px;
+        font-size: 20px;
       }
       
       .app-content,
       .download-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 60px;
       }
       
       .policy-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 30px;
       }
       
       .nav {
@@ -707,13 +686,13 @@
       }
       
       .phone-mockup {
-        width: 240px;
-        height: 480px;
+        width: 280px;
+        height: 560px;
       }
       
       .footer-links {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
     }
   </style>

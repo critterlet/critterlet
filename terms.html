@@ -25,7 +25,7 @@
     body {
       font-family: 'Switzal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #FAFBFC;
-      color: #2D3748;
+      color: #3E2723;
       line-height: 1.6;
     }
     
@@ -52,20 +52,11 @@
       }
     }
     
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-    
     /* Header */
     .header {
       background: white;
       border-bottom: 1px solid #E2E8F0;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -85,73 +76,73 @@
     .back-link {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #8B6E4E;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
       transition: all 0.3s ease;
       animation: slideInLeft 0.8s ease-out;
+      font-size: 18px;
     }
     
     .back-link:hover {
-      background: #F7FAFC;
+      background: rgba(139, 110, 78, 0.1);
       transform: translateX(-5px);
     }
     
     .nav {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
     }
     
     .nav a {
-      color: #4A5568;
+      color: #5D4037;
       text-decoration: none;
       font-weight: 500;
-      font-size: 15px;
-      padding: 8px 16px;
+      font-size: 18px;
+      padding: 10px 18px;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
     
     .nav a:hover {
       color: #8B6E4E;
-      background: #F7FAFC;
+      background: rgba(139, 110, 78, 0.1);
       transform: translateY(-2px);
     }
     
     .nav a.active {
-      background: #AEDCB5;
+      background: #8B6E4E;
       color: white;
-      animation: pulse 2s ease-in-out infinite;
     }
     
     /* Main Content */
     .main-content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 60px 2rem;
+      padding: 80px 2rem;
     }
     
     .page-header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       animation: fadeInUp 1s ease-out;
     }
     
     .page-title {
-      font-size: 40px;
+      font-size: 48px;
       font-weight: 800;
-      color: #2D3748;
-      margin-bottom: 16px;
+      color: #3E2723;
+      margin-bottom: 20px;
     }
     
     .page-subtitle {
-      font-size: 20px;
-      color: #4A5568;
-      margin-bottom: 24px;
-      max-width: 600px;
+      font-size: 24px;
+      color: #5D4037;
+      margin-bottom: 30px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       animation: fadeInUp 1s ease-out 0.2s both;
@@ -159,11 +150,11 @@
     
     .update-badge {
       display: inline-block;
-      background: #AEDCB5;
+      background: #8B6E4E;
       color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
       font-weight: 600;
       animation: fadeInUp 1s ease-out 0.4s both;
     }
@@ -171,30 +162,18 @@
     /* Policy Content */
     .policy-content {
       background: white;
-      border-radius: 16px;
-      padding: 48px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      border: 1px solid #E2E8F0;
+      border-radius: 25px;
+      padding: 60px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 2px solid #E2E8F0;
       animation: fadeInUp 1s ease-out 0.6s both;
     }
     
     .policy-section {
-      margin-bottom: 48px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid #E2E8F0;
-      animation: fadeInUp 0.8s ease-out forwards;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #F0EAE7;
     }
-    
-    .policy-section:nth-child(1) { animation-delay: 0.1s; }
-    .policy-section:nth-child(2) { animation-delay: 0.2s; }
-    .policy-section:nth-child(3) { animation-delay: 0.3s; }
-    .policy-section:nth-child(4) { animation-delay: 0.4s; }
-    .policy-section:nth-child(5) { animation-delay: 0.5s; }
-    .policy-section:nth-child(6) { animation-delay: 0.6s; }
-    .policy-section:nth-child(7) { animation-delay: 0.7s; }
-    .policy-section:nth-child(8) { animation-delay: 0.8s; }
-    .policy-section:nth-child(9) { animation-delay: 0.9s; }
-    .policy-section:nth-child(10) { animation-delay: 1.0s; }
     
     .policy-section:last-child {
       border-bottom: none;
@@ -202,25 +181,24 @@
     }
     
     .section-title {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 20px;
+      color: #3E2723;
+      margin-bottom: 25px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
     }
     
     .section-icon {
-      font-size: 24px;
-      animation: pulse 2s ease-in-out infinite;
+      font-size: 28px;
     }
     
     .policy-section p {
-      color: #4A5568;
-      margin-bottom: 16px;
+      color: #5D4037;
+      margin-bottom: 20px;
       line-height: 1.7;
-      font-size: 16px;
+      font-size: 18px;
     }
     
     .policy-section p:last-child {
@@ -228,93 +206,95 @@
     }
     
     .policy-section strong {
-      color: #2D3748;
+      color: #3E2723;
       font-weight: 600;
     }
     
     .highlight-box {
-      background: #F0F8E7;
-      border: 1px solid #AEDCB5;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-      animation: pulse 3s ease-in-out infinite;
+      background: linear-gradient(135deg, #F7FAFC, #F0EAE7);
+      border: 2px solid #8B6E4E;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 25px 0;
     }
     
     .highlight-box p {
       margin: 0;
-      color: #2D3748;
+      color: #3E2723;
       font-weight: 500;
+      font-size: 18px;
     }
     
     .warning-box {
-      background: #FFF8E1;
-      border: 1px solid #FFC107;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-      animation: pulse 3s ease-in-out infinite;
+      background: linear-gradient(135deg, #FFF8E1, #FFECB3);
+      border: 2px solid #FFC107;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 25px 0;
     }
     
     .warning-box p {
       margin: 0;
-      color: #2D3748;
+      color: #3E2723;
       font-weight: 500;
+      font-size: 18px;
     }
     
     .contact-section {
-      background: #F7FAFC;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 32px;
+      background: linear-gradient(135deg, #F7FAFC, #F0EAE7);
+      border: 2px solid #8B6E4E;
+      border-radius: 20px;
+      padding: 40px;
       text-align: center;
-      margin-top: 48px;
+      margin-top: 60px;
       animation: fadeInUp 1s ease-out 0.8s both;
     }
     
     .contact-section h3 {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
-      color: #2D3748;
-      margin-bottom: 12px;
+      color: #3E2723;
+      margin-bottom: 15px;
     }
     
     .contact-section p {
-      color: #4A5568;
-      margin-bottom: 20px;
+      color: #5D4037;
+      margin-bottom: 25px;
+      font-size: 18px;
     }
     
     .contact-email {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: #8B6E4E;
+      gap: 10px;
+      background: linear-gradient(135deg, #8B6E4E, #785F44);
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 15px 25px;
+      border-radius: 15px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 18px;
       transition: all 0.3s ease;
     }
     
     .contact-email:hover {
       transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(139, 110, 78, 0.4);
+      box-shadow: 0 10px 30px rgba(139, 110, 78, 0.4);
     }
     
     .response-time {
-      font-size: 14px;
+      font-size: 16px;
       color: #718096;
-      margin-top: 12px;
+      margin-top: 15px;
     }
     
     /* Footer */
     .footer {
-      background: #2D3748;
+      background: #3E2723;
       color: white;
-      padding: 32px 0;
+      padding: 40px 0;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
     }
     
     .footer-content {
@@ -326,8 +306,8 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 32px;
-      margin-bottom: 20px;
+      gap: 40px;
+      margin-bottom: 25px;
       flex-wrap: wrap;
     }
     
@@ -337,8 +317,9 @@
       opacity: 0.7;
       font-weight: 500;
       transition: all 0.3s ease;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 8px;
+      font-size: 18px;
     }
     
     .footer-links a:hover {
@@ -349,7 +330,7 @@
     
     .footer-bottom {
       opacity: 0.5;
-      font-size: 14px;
+      font-size: 16px;
     }
     
     /* Responsive */
@@ -357,7 +338,7 @@
       .header-content {
         padding: 0 1rem;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
       }
       
       .nav {
@@ -365,20 +346,20 @@
       }
       
       .main-content {
-        padding: 40px 1rem;
+        padding: 50px 1rem;
       }
       
       .page-title {
-        font-size: 32px;
+        font-size: 36px;
       }
       
       .policy-content {
-        padding: 32px 24px;
+        padding: 40px 30px;
       }
       
       .footer-links {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
     }
   </style>
@@ -442,7 +423,7 @@
         <p>• All activity that occurs under your account</p>
         <p>• Notifying us immediately if you suspect unauthorized use</p>
         <p>• Providing accurate information when creating your account</p>
-        <div class="warning-box">
+       <div class="warning-box">
           <p><strong>Account Security:</strong> Never share your login information. If you suspect your account has been compromised, contact us immediately at critterlet@gmail.com</p>
         </div>
       </div>
