@@ -4,71 +4,386 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Critterlet — Privacy Policy</title>
-  <link rel="stylesheet" href="https://meenaaa13.github.io/critterlet-privacy/assets/style.css" />
+  <meta name="description" content="How Critterlet collects, uses, and protects your data while you study with your virtual critters." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles for policy pages */
+    .policy-page {
+      background: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 100%);
+      min-height: 100vh;
+    }
+    
+    .policy-header {
+      background: linear-gradient(135deg, #FFF8E7 0%, #FFF5F5 100%);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      margin-bottom: 40px;
+    }
+    
+    .policy-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 228, 230, 0.8);
+    }
+    
+    .back-link:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .policy-title-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .policy-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 15px;
+      animation: slideInUp 1s ease-out;
+    }
+    
+    .policy-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-medium);
+      max-width: 600px;
+      margin: 0 auto;
+      animation: slideInUp 1s ease-out 0.2s both;
+    }
+    
+    .policy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    
+    .policy-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 182, 193, 0.2);
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+    
+    .update-badge {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--gold), #FFA500);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .policy-section {
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(255, 182, 193, 0.2);
+    }
+    
+    .policy-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .policy-section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .section-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    
+    .policy-section p {
+      color: var(--text-medium);
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(174, 220, 181, 0.1));
+      border: 1px solid var(--secondary);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .highlight-box p {
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    
+    .contact-box {
+      background: var(--card-bg);
+      border: 2px solid var(--tertiary);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+      box-shadow: 0 8px 25px rgba(174, 220, 181, 0.2);
+    }
+    
+    .contact-critter {
+      width: 60px;
+      height: 60px;
+      background: var(--card-bg);
+      border: 3px solid var(--tertiary);
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .contact-email-link {
+      display: inline-block;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      background: rgba(255, 182, 193, 0.1);
+      border-radius: 15px;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-email-link:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    @media (max-width: 768px) {
+      .policy-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .policy-title {
+        font-size: 2.2rem;
+      }
+      
+      .policy-card {
+        padding: 25px;
+        margin: 0 10px;
+      }
+      
+      .policy-section h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
-<body class="theme">
-  <header class="site-header gradient small">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <a class="logo-home" href="index.html" aria-label="Back to home"></a>
-        <div class="brand-text">
-          <h1>Privacy Policy</h1>
-          <p class="tag">How we collect, use, and protect your data</p>
-        </div>
+<body class="policy-page">
+  <!-- Floating Background Elements -->
+  <div class="floating-elements">
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+  </div>
+
+  <!-- Sparkle Effects -->
+  <div class="sparkles">
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+  </div>
+
+  <header class="policy-header">
+    <nav class="policy-nav">
+      <a href="index.html" class="back-link">
+        ← Back to Home
+      </a>
+      <div class="main-nav">
+        <a href="privacy.html" class="nav-chip" style="background: var(--secondary); color: white;">Privacy</a>
+        <a href="terms.html" class="nav-chip">Terms</a>
+        <a href="index.html#download" class="nav-chip">Download</a>
+        <a href="index.html#contact" class="nav-chip">Contact</a>
       </div>
-      <nav class="nav">
-        <a href="privacy.html" class="chip chip--active">Privacy</a>
-        <a href="terms.html" class="chip">Terms</a>
-        <a href="index.html#download" class="chip">Download</a>
-        <a href="index.html#contact" class="chip">Contact</a>
-      </nav>
+    </nav>
+    
+    <div class="policy-title-section">
+      <h1 class="policy-title">Privacy Policy</h1>
+      <p class="policy-subtitle">How we collect, use, and protect your data while you study with your virtual critters</p>
     </div>
   </header>
 
-  <main class="wrap">
-    <article class="doc card">
-      <div class="doc-header">
-        <span class="badge">Last updated: 2025-09-26</span>
+  <main class="policy-content">
+    <div class="policy-card">
+      <div class="update-badge">Last updated: September 26, 2025</div>
+      
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🛡️</div>
+          Overview
+        </h3>
+        <p>Critterlet ("we", "us", "our") is a study app designed to make learning magical with adorable virtual companions. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you use Critterlet.</p>
+        <div class="highlight-box">
+          <p><strong>Our Promise:</strong> We believe your privacy is fundamental to building trust. We only collect what's necessary to make your study experience amazing, and we never sell your personal information.</p>
+        </div>
       </div>
-      <h2>Overview</h2>
-      <p>Critterlet (“we”, “us”, “our”) is a study app. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you use Critterlet.</p>
 
-      <h3>Information We Collect</h3>
-      <p>Account data (name, email), usage data (study streaks, session length), device diagnostics (app version, OS, crash logs), and optional study content you create (flashcards, to-dos, notes).</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">📊</div>
+          Information We Collect
+        </h3>
+        <p><strong>Account Information:</strong> When you create an account, we collect your name and email address to personalize your experience and sync your progress across devices.</p>
+        <p><strong>Study Data:</strong> We track your study sessions, streaks, session length, and completed tasks to help you visualize your progress and keep your critters happy and growing.</p>
+        <p><strong>App Usage:</strong> We collect basic diagnostics like app version, operating system, and crash logs to fix bugs and improve performance.</p>
+        <p><strong>Study Content:</strong> Any flashcards, to-do items, or notes you create are stored securely to sync across your devices. This content remains private to you.</p>
+      </div>
 
-      <h3>How We Use Information</h3>
-      <p>We use your information to provide and improve features, sync your content, maintain security, deliver support, and communicate updates.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">⚙️</div>
+          How We Use Your Information
+        </h3>
+        <p>We use your information to:</p>
+        <p>• <strong>Personalize your experience</strong> by showing your study progress, critter evolution, and achievements</p>
+        <p>• <strong>Sync your data</strong> across all your devices so you can study anywhere</p>
+        <p>• <strong>Send helpful notifications</strong> about study streaks, critter needs, and app updates</p>
+        <p>• <strong>Improve our app</strong> by analyzing usage patterns and fixing technical issues</p>
+        <p>• <strong>Provide customer support</strong> when you need help with your account or technical issues</p>
+      </div>
 
-      <h3>Sharing and Processing</h3>
-      <p>We use service providers (cloud hosting, analytics, crash reporting). We do not sell your information.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🤝</div>
+          Sharing and Processing
+        </h3>
+        <p>We work with trusted service providers for cloud hosting, analytics, and crash reporting to keep Critterlet running smoothly. These partners are contractually required to protect your data and only use it for the services they provide us.</p>
+        <div class="highlight-box">
+          <p><strong>We never sell your information.</strong> Your study data, personal information, and content remain private and are never shared for advertising or marketing purposes.</p>
+        </div>
+      </div>
 
-      <h3>Data Retention</h3>
-      <p>We retain data while you have an account and as needed for legal or business purposes. You may request deletion at any time.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🗂️</div>
+          Data Retention
+        </h3>
+        <p>We keep your data while you have an active account and for a reasonable period afterward as needed for legal or business purposes. You can request deletion of your account and data at any time by contacting us.</p>
+      </div>
 
-      <h3>Your Rights</h3>
-      <p>You may request to access, correct, or delete your data by emailing <a href="mailto:critterlet@gmail.com">critterlet@gmail.com</a>.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">✋</div>
+          Your Rights
+        </h3>
+        <p>You have the right to:</p>
+        <p>• <strong>Access</strong> your personal data and study information</p>
+        <p>• <strong>Correct</strong> any inaccurate information in your account</p>
+        <p>• <strong>Delete</strong> your account and associated data</p>
+        <p>• <strong>Export</strong> your study data and content</p>
+        <p>To exercise these rights, simply email us at the address below, and we'll help you right away.</p>
+      </div>
 
-      <h3>Children</h3>
-      <p>Not intended for children under 13. We do not knowingly collect data from children under 13.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">👶</div>
+          Children's Privacy
+        </h3>
+        <p>Critterlet is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will delete it immediately.</p>
+      </div>
 
-      <h3>International Users</h3>
-      <p>We process data in Canada and other countries and comply with GDPR, CCPA, and applicable laws.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🌍</div>
+          International Users
+        </h3>
+        <p>We process data in Canada and other countries as needed to provide our services. We comply with applicable privacy laws including GDPR, CCPA, and other regional regulations to protect your privacy rights.</p>
+      </div>
 
-      <h3>Security</h3>
-      <p>We employ reasonable safeguards, but no system is 100% secure.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🔒</div>
+          Security
+        </h3>
+        <p>We employ industry-standard security measures including encryption, secure servers, and regular security audits to protect your information. However, no system is 100% secure, and we cannot guarantee absolute security.</p>
+      </div>
 
-      <h3>Changes</h3>
-      <p>We may update this policy and will post updates here.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">📝</div>
+          Policy Updates
+        </h3>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make changes, we'll post the updated policy here and notify you through the app or by email.</p>
+      </div>
 
-      <h3>Contact</h3>
-      <p>Email <a href="mailto:critterlet@gmail.com">critterlet@gmail.com</a></p>
-    </article>
+      <div class="contact-box">
+        <div class="contact-critter">
+          <div class="critter-face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="smile"></div>
+          </div>
+        </div>
+        <h3>Questions About Your Privacy?</h3>
+        <p>We're here to help! Contact our friendly support team:</p>
+        <a href="mailto:critterlet@gmail.com" class="contact-email-link">critterlet@gmail.com</a>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 15px;">We typically respond within 3-5 business days</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer wrap">
-    <p>© 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="index.html#download">Download</a></p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="index.html#download">Download</a></p>
+    </div>
   </footer>
 
-  <script src="https://meenaaa13.github.io/critterlet-privacy/assets/script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

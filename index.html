@@ -3,93 +3,243 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Critterlet — Policies & Info</title>
-  <meta name="description" content="Critterlet privacy policy, terms, and support information." />
-  <link rel="stylesheet" href="https://meenaaa13.github.io/critterlet-privacy/assets/style.css" />
+  <title>Critterlet — Cozy Study, Happy Critters</title>
+  <meta name="description" content="Transform your study sessions into magical adventures with adorable virtual pets that grow as you learn." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="theme">
-  <header class="site-header gradient">
-    <div class="wrap header-inner">
+<body>
+  <!-- Floating Background Elements -->
+  <div class="floating-elements">
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+  </div>
+
+  <!-- Sparkle Effects -->
+  <div class="sparkles">
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-content">
       <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="28" fill="#FFF8F8" stroke="#FFE4E6" stroke-width="2"/>
-            <circle cx="24" cy="28" r="4" fill="#8B6E4E"/>
-            <circle cx="40" cy="28" r="4" fill="#8B6E4E"/>
-            <path d="M20 18 C22 10, 30 8, 32 16" stroke="#FFB6C1" stroke-width="3" stroke-linecap="round"/>
-            <path d="M44 18 C42 10, 34 8, 32 16" stroke="#FFB6C1" stroke-width="3" stroke-linecap="round"/>
-            <path d="M24 40 C32 46, 40 40, 40 40" stroke="#9CAF88" stroke-width="3" stroke-linecap="round"/>
-          </svg>
+        <div class="logo-container">
+          <div class="critter-logo">
+            <div class="critter-face">
+              <div class="eye left"></div>
+              <div class="eye right"></div>
+              <div class="smile"></div>
+            </div>
+          </div>
         </div>
         <div class="brand-text">
-          <h1>Critterlet</h1>
-          <p class="tag">Cozy study, happy critters.</p>
+          <h1 class="brand-title">Critterlet</h1>
+          <p class="brand-tagline">Cozy study, happy critters.</p>
         </div>
       </div>
-      <nav class="nav">
-        <a href="privacy.html" class="chip">Privacy Policy</a>
-        <a href="terms.html" class="chip">Terms & Conditions</a>
-        <a href="#download" class="chip">Download</a>
-        <a href="#contact" class="chip">Contact</a>
+      
+      <nav class="main-nav">
+        <a href="privacy.html" class="nav-chip">Privacy Policy</a>
+        <a href="terms.html" class="nav-chip">Terms & Conditions</a>
+        <a href="#download" class="nav-chip">Download</a>
+        <a href="#contact" class="nav-chip">Contact</a>
       </nav>
-    </div>
-    <div class="floaters" aria-hidden="true">
-      <div class="critter critter--bunny"></div>
-      <div class="critter critter--cat"></div>
-      <div class="critter critter--fox"></div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero card">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h2>Welcome to Critterlet Policies</h2>
-          <p>Here you can find our Privacy Policy and Terms & Conditions, written in friendly language and designed to match our cozy vibe.</p>
-          <div class="cta-row">
-            <a href="privacy.html" class="btn btn-pink pop">Read Privacy Policy</a>
-            <a href="terms.html" class="btn btn-mint">Read Terms</a>
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2 class="hero-title">Welcome to Critterlet</h2>
+            <p class="hero-description">Transform your study sessions into magical adventures! Watch adorable critters grow as you learn, track your progress with cozy stats, and make studying the highlight of your day.</p>
+            
+            <div class="hero-buttons">
+              <a href="privacy.html" class="btn btn-primary">
+                <span class="btn-icon">📋</span>
+                Privacy Policy
+              </a>
+              <a href="terms.html" class="btn btn-secondary">
+                <span class="btn-icon">📄</span>
+                Terms
+              </a>
+            </div>
+            
+            <div class="hero-badges">
+              <span class="badge">Last updated: 2025-09-26</span>
+              <span class="badge">HTTPS Ready</span>
+              <span class="badge premium">Study Safe</span>
+            </div>
           </div>
-          <div class="meta">
-            <span class="badge">Last updated: 2025-09-26</span>
-            <span class="badge">HTTPS ready</span>
-          </div>
-        </div>
-        <div class="hero-art">
-          <div class="scene">
-            <div class="cloud cloud--1"></div>
-            <div class="cloud cloud--2"></div>
-            <div class="cloud cloud--3"></div>
-            <div class="big-critter"></div>
+          
+          <div class="hero-visual">
+            <div class="pet-container">
+              <div class="pet-background"></div>
+              <div class="main-critter" id="mainCritter">
+                <div class="critter-body">
+                  <div class="critter-face">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                  </div>
+                  <div class="critter-ears">
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-ring">
+                <svg width="300" height="300">
+                  <circle cx="150" cy="150" r="140" class="progress-background"/>
+                  <circle cx="150" cy="150" r="140" class="progress-bar" id="progressCircle"/>
+                </svg>
+                <div class="xp-display">
+                  <span class="xp-number" id="xpNumber">1,247</span>
+                  <span class="xp-label">XP Earned</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Download section -->
-    <section id="download" class="card">
-      <h3>Get the App</h3>
-      <p>Critterlet will be available soon on the App Store and Google Play. When approved, you can use the buttons and QR code below to download:</p>
-      <div class="cta-row">
-        <a href="#" class="btn btn-pink">App Store (Coming Soon)</a>
-        <a href="#" class="btn btn-mint">Google Play (Coming Soon)</a>
-      </div>
-      <div style="margin-top:20px;text-align:center;">
-        <img src="https://via.placeholder.com/150x150.png?text=QR+Code" alt="Download QR Code" style="border-radius:12px;border:1px solid #EAE3DA;">
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h3 class="section-title">Why Students Love Critterlet</h3>
+        <div class="features-grid">
+          <div class="feature-card" data-delay="0">
+            <div class="feature-icon">🐾</div>
+            <h4>Adorable Companions</h4>
+            <p>Choose from foxes, bunnies, pandas, and more! Watch them evolve as you study.</p>
+          </div>
+          <div class="feature-card" data-delay="100">
+            <div class="feature-icon">📊</div>
+            <h4>Progress Tracking</h4>
+            <p>Beautiful visualizations of your study streaks, time spent, and achievements.</p>
+          </div>
+          <div class="feature-card" data-delay="200">
+            <div class="feature-icon">🎯</div>
+            <h4>Study Goals</h4>
+            <p>Set daily targets and build consistent habits with gentle reminders.</p>
+          </div>
+          <div class="feature-card" data-delay="300">
+            <div class="feature-icon">🛍️</div>
+            <h4>Customize & Collect</h4>
+            <p>Earn Paw Points to buy accessories, backgrounds, and special items.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="card">
-      <h3>Contact</h3>
-      <p>Questions or requests about your data? Email us at <a href="mailto:critterlet@gmail.com">critterlet@gmail.com</a>.</p>
-      <p class="subtle">We typically respond within 3–5 business days.</p>
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <h3 class="section-title">Your Study Journey</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">⏰</div>
+            <div class="stat-number">2h 30m</div>
+            <div class="stat-label">Today's Study Time</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-number">7 days</div>
+            <div class="stat-label">Current Streak</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-number">12</div>
+            <div class="stat-label">Tasks Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number">847</div>
+            <div class="stat-label">Paw Points</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+      <div class="container">
+        <h3 class="section-title">Get Critterlet</h3>
+        <p class="download-description">Available soon on App Store and Google Play. Join thousands of students making study time magical!</p>
+        
+        <div class="download-buttons">
+          <a href="#" class="download-btn app-store">
+            <div class="btn-content">
+              <span class="btn-icon">📱</span>
+              <div class="btn-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="download-btn google-play">
+            <div class="btn-content">
+              <span class="btn-icon">🤖</span>
+              <div class="btn-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="qr-section">
+          <div class="qr-code">
+            <div class="qr-placeholder">
+              <span>QR Code</span>
+              <small>Scan to download</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h3 class="section-title">Get in Touch</h3>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p>Questions about your data or need support?</p>
+            <a href="mailto:critterlet@gmail.com" class="contact-email">critterlet@gmail.com</a>
+            <p class="response-time">We typically respond within 3-5 business days.</p>
+          </div>
+          <div class="contact-critter">
+            <div class="support-critter">
+              <div class="critter-face">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="smile big"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer wrap">
-    <p>© 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="#download">Download</a></p>
+    </div>
   </footer>
 
-  <script src="https://meenaaa13.github.io/critterlet-privacy/assets/script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

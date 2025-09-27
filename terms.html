@@ -4,65 +4,419 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Critterlet — Terms & Conditions</title>
-  <link rel="stylesheet" href="https://meenaaa13.github.io/critterlet-privacy/assets/style.css" />
+  <meta name="description" content="Terms and conditions for using Critterlet - please read before studying with your virtual critters." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles for terms page */
+    .policy-page {
+      background: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 100%);
+      min-height: 100vh;
+    }
+    
+    .policy-header {
+      background: linear-gradient(135deg, #FFF8E7 0%, #FFF5F5 100%);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      margin-bottom: 40px;
+    }
+    
+    .policy-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 228, 230, 0.8);
+    }
+    
+    .back-link:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .policy-title-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .policy-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 15px;
+      animation: slideInUp 1s ease-out;
+    }
+    
+    .policy-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-medium);
+      max-width: 600px;
+      margin: 0 auto;
+      animation: slideInUp 1s ease-out 0.2s both;
+    }
+    
+    .policy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    
+    .policy-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 182, 193, 0.2);
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+    
+    .update-badge {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--tertiary), #90EE90);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(174, 220, 181, 0.3);
+    }
+    
+    .policy-section {
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(255, 182, 193, 0.2);
+    }
+    
+    .policy-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .policy-section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .section-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--tertiary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    
+    .policy-section p {
+      color: var(--text-medium);
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(174, 220, 181, 0.1), rgba(255, 182, 193, 0.1));
+      border: 1px solid var(--tertiary);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .highlight-box p {
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+      border: 1px solid #FFC107;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .warning-box p {
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    
+    .contact-box {
+      background: var(--card-bg);
+      border: 2px solid var(--tertiary);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+      box-shadow: 0 8px 25px rgba(174, 220, 181, 0.2);
+    }
+    
+    .contact-critter {
+      width: 60px;
+      height: 60px;
+      background: var(--card-bg);
+      border: 3px solid var(--tertiary);
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .contact-email-link {
+      display: inline-block;
+      color: var(--tertiary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      background: rgba(174, 220, 181, 0.1);
+      border-radius: 15px;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-email-link:hover {
+      background: var(--tertiary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    @media (max-width: 768px) {
+      .policy-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .policy-title {
+        font-size: 2.2rem;
+      }
+      
+      .policy-card {
+        padding: 25px;
+        margin: 0 10px;
+      }
+      
+      .policy-section h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
-<body class="theme">
-  <header class="site-header gradient small">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <a class="logo-home" href="index.html" aria-label="Back to home"></a>
-        <div class="brand-text">
-          <h1>Terms & Conditions</h1>
-          <p class="tag">Please read these terms before using Critterlet</p>
-        </div>
+<body class="policy-page">
+  <!-- Floating Background Elements -->
+  <div class="floating-elements">
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+    <div class="floating-critter"></div>
+  </div>
+
+  <!-- Sparkle Effects -->
+  <div class="sparkles">
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+  </div>
+
+  <header class="policy-header">
+    <nav class="policy-nav">
+      <a href="index.html" class="back-link">
+        ← Back to Home
+      </a>
+      <div class="main-nav">
+        <a href="privacy.html" class="nav-chip">Privacy</a>
+        <a href="terms.html" class="nav-chip" style="background: var(--tertiary); color: white;">Terms</a>
+        <a href="index.html#download" class="nav-chip">Download</a>
+        <a href="index.html#contact" class="nav-chip">Contact</a>
       </div>
-      <nav class="nav">
-        <a href="privacy.html" class="chip">Privacy</a>
-        <a href="terms.html" class="chip chip--active">Terms</a>
-        <a href="index.html#download" class="chip">Download</a>
-        <a href="index.html#contact" class="chip">Contact</a>
-      </nav>
+    </nav>
+    
+    <div class="policy-title-section">
+      <h1 class="policy-title">Terms & Conditions</h1>
+      <p class="policy-subtitle">Please read these terms before using Critterlet to study with your virtual companions</p>
     </div>
   </header>
 
-  <main class="wrap">
-    <article class="doc card">
-      <div class="doc-header">
-        <span class="badge">Last updated: 2025-09-26</span>
+  <main class="policy-content">
+    <div class="policy-card">
+      <div class="update-badge">Last updated: September 26, 2025</div>
+      
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">📋</div>
+          Agreement to Terms
+        </h3>
+        <p>These Terms and Conditions ("Terms") govern your use of Critterlet, a study application that helps you learn with adorable virtual companions. By downloading, installing, or using our app, you agree to be bound by these Terms.</p>
+        <div class="highlight-box">
+          <p><strong>Important:</strong> If you don't agree with any part of these terms, please don't use Critterlet. We want everyone to have a positive and safe study experience!</p>
+        </div>
       </div>
-      <h2>Agreement</h2>
-      <p>These Terms govern your use of Critterlet. By using the app, you agree to them.</p>
 
-      <h3>License</h3>
-      <p>You have a limited, personal license to use Critterlet. Do not misuse or attempt to reverse-engineer it.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">📱</div>
+          License to Use
+        </h3>
+        <p>We grant you a limited, personal, non-exclusive, non-transferable license to download and use Critterlet on your personal devices for your own study and educational purposes.</p>
+        <p><strong>You may not:</strong></p>
+        <p>• Reverse engineer, decompile, or attempt to extract the source code</p>
+        <p>• Use the app for any commercial purposes without our permission</p>
+        <p>• Share your account credentials with others</p>
+        <p>• Use the app to violate any laws or harm others</p>
+      </div>
 
-      <h3>Accounts</h3>
-      <p>You are responsible for your account credentials and activity. Notify us of unauthorized use.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">👤</div>
+          Your Account Responsibilities
+        </h3>
+        <p>You are responsible for:</p>
+        <p>• Keeping your account credentials secure and confidential</p>
+        <p>• All activity that occurs under your account</p>
+        <p>• Notifying us immediately if you suspect unauthorized use</p>
+        <p>• Providing accurate information when creating your account</p>
+        <div class="warning-box">
+          <p><strong>Account Security:</strong> Never share your login information. If you suspect your account has been compromised, contact us immediately at critterlet@gmail.com</p>
+        </div>
+      </div>
 
-      <h3>Content You Create</h3>
-      <p>You keep rights to your study content. We only process it to operate the app.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">✍️</div>
+          Your Study Content
+        </h3>
+        <p>You retain all rights to the study content you create in Critterlet, including flashcards, notes, to-do items, and other educational materials. We only process this content to provide our services to you.</p>
+        <p>You grant us permission to store, sync, and backup your content across your devices so you can access it anywhere you study.</p>
+      </div>
 
-      <h3>Premium & Virtual Items</h3>
-      <p>Purchases are final unless required by law. Virtual items (like PawPoints) have no cash value outside the app.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">💎</div>
+          Premium Features & Virtual Items
+        </h3>
+        <p><strong>Premium Subscriptions:</strong> Some features may require a premium subscription. Subscription fees are charged in advance and are non-refundable except as required by law.</p>
+        <p><strong>Paw Points & Virtual Items:</strong> Paw Points are virtual currency earned through studying. Virtual items like critter accessories and backgrounds have no cash value and cannot be transferred or refunded.</p>
+        <p><strong>Purchases:</strong> All purchases are final unless required by applicable law. If you experience issues with a purchase, contact us for assistance.</p>
+      </div>
 
-      <h3>Limitation of Liability</h3>
-      <p>We are not liable for indirect damages. The app is provided “as is.”</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">⚠️</div>
+          App Availability & Changes
+        </h3>
+        <p>We strive to keep Critterlet available 24/7, but we cannot guarantee uninterrupted service. We may need to take the app offline for maintenance, updates, or other reasons.</p>
+        <p>We may update, modify, or discontinue features to improve your experience. We'll do our best to notify you of significant changes in advance.</p>
+      </div>
 
-      <h3>Termination</h3>
-      <p>We may suspend accounts that violate terms. You may stop using the app anytime.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🛡️</div>
+          Limitation of Liability
+        </h3>
+        <p>Critterlet is provided "as is" without warranties of any kind. While we work hard to provide a great study experience, we cannot guarantee that the app will always work perfectly or meet all your expectations.</p>
+        <p>We are not liable for any indirect, incidental, or consequential damages arising from your use of the app, including lost study time or data.</p>
+        <div class="warning-box">
+          <p><strong>Study Responsibility:</strong> Critterlet is a study aid, not a replacement for proper study techniques or academic guidance. Always follow your educational institution's guidelines and requirements.</p>
+        </div>
+      </div>
 
-      <h3>Changes</h3>
-      <p>We may update these Terms and will post them here.</p>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">🚫</div>
+          Prohibited Uses
+        </h3>
+        <p>You agree not to use Critterlet to:</p>
+        <p>• Harass, abuse, or harm other users</p>
+        <p>• Violate any laws or regulations</p>
+        <p>• Attempt to hack, disrupt, or damage our services</p>
+        <p>• Create fake accounts or impersonate others</p>
+        <p>• Upload malicious content or spam</p>
+      </div>
 
-      <h3>Contact</h3>
-      <p>Email <a href="mailto:critterlet@gmail.com">critterlet@gmail.com</a></p>
-    </article>
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">⛔</div>
+          Account Termination
+        </h3>
+        <p>We may suspend or terminate accounts that violate these Terms or engage in harmful behavior. You may also delete your account at any time through the app settings or by contacting us.</p>
+        <p>Upon termination, your access to premium features will end, but you can export your study data before closing your account.</p>
+      </div>
+
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">📝</div>
+          Changes to Terms
+        </h3>
+        <p>We may update these Terms from time to time to reflect changes in our services or applicable law. When we make changes, we'll post the updated Terms here and notify you through the app.</p>
+        <p>Continued use of Critterlet after changes means you accept the new Terms.</p>
+      </div>
+
+      <div class="policy-section">
+        <h3>
+          <div class="section-icon">⚖️</div>
+          Governing Law
+        </h3>
+        <p>These Terms are governed by the laws of Canada. Any disputes will be resolved in the courts of Canada, unless otherwise required by your local laws.</p>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-critter">
+          <div class="critter-face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="smile"></div>
+          </div>
+        </div>
+        <h3>Questions About These Terms?</h3>
+        <p>Our team is here to help clarify anything!</p>
+        <a href="mailto:critterlet@gmail.com" class="contact-email-link">critterlet@gmail.com</a>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 15px;">We typically respond within 3-5 business days</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer wrap">
-    <p>© 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="index.html#download">Download</a></p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="index.html#download">Download</a></p>
+    </div>
   </footer>
 
-  <script src="https://meenaaa13.github.io/critterlet-privacy/assets/script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
