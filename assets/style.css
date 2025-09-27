@@ -1,0 +1,76 @@
+/* Critterlet brand theme */
+.site-header{position:relative}
+.site-header.small .header-inner{height:108px}
+.header-inner{display:flex;align-items:flex-end;justify-content:space-between;height:130px}
+.gradient{background:linear-gradient(180deg,#FFF8E7 0%,#FFF5F5 100%);border-bottom-left-radius:20px;border-bottom-right-radius:20px;box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo-home{display:inline-block;width:48px;height:48px;border-radius:50%;background:#FFF8F8;border:2px solid #FFE4E6;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.brand-text h1{font-size:36px;margin:0;color:var(--primary)}
+.brand-text .tag{margin:2px 0 0;color:#9CAF88}
+
+
+.nav{display:flex;gap:8px}
+.chip{display:inline-block;padding:10px 14px;border-radius:999px;border:1px solid #FFE4E6;background:#fff;color:var(--primary);text-decoration:none;font-weight:600}
+.chip--active,.chip:hover{background:#FFF0F4}
+
+
+/* Cards */
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:22px;margin:18px 0}
+.badge{display:inline-block;border:1px solid #FFE4E6;background:#FFF8F8;color:var(--primary);padding:4px 10px;border-radius:999px;font-size:.85rem}
+
+
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+.hero-copy h2{font-size:32px;margin:6px 0 8px}
+.cta-row{display:flex;gap:10px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid transparent;transition:transform .18s ease, box-shadow .18s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 18px rgba(0,0,0,.08)}
+.btn-pink{background:var(--pink);color:#fff;border-color:#f9a9b9}
+.btn-mint{background:var(--mint);color:#2e5b45;border-color:#a4d7b1}
+.subtle{color:#7d8d73}
+
+
+/* Hero art */
+.scene{position:relative;height:240px;background:linear-gradient(180deg,#ffffff 0%,#fffaf8 100%);border-radius:18px;border:1px solid var(--line);overflow:hidden}
+.cloud{position:absolute;width:120px;height:60px;background:#fff;border:1px solid #f1e7de;border-radius:40px;opacity:.9;filter:blur(.2px)}
+.cloud::after{content:"";position:absolute;right:10px;top:-18px;width:70px;height:70px;background:#fff;border:1px solid #f1e7de;border-radius:50%}
+.cloud--1{left:-10px;top:18px;animation:drift 26s linear infinite}
+.cloud--2{left:30%;top:60px;animation:drift 36s linear infinite reverse}
+.cloud--3{left:70%;top:20px;animation:drift 30s linear infinite}
+@keyframes drift{0%{transform:translateX(-10%)}100%{transform:translateX(110%)}}
+
+
+.big-critter{position:absolute;bottom:0;right:14px;width:160px;height:140px;border-radius:26px 26px 0 0;background:#FFF8F8;border:2px solid #FFE4E6;box-shadow:0 6px 0 #FFE4E6 inset}
+.big-critter::before, .big-critter::after{content:"";position:absolute;width:48px;height:48px;background:#FFF0F4;border:2px solid #FFE4E6;border-radius:50%}
+.big-critter::before{left:8px;top:-24px}
+.big-critter::after{right:8px;top:-24px}
+
+
+/* Floating mini critters */
+.floaters{position:absolute;inset:0;pointer-events:none}
+.critter{position:absolute;width:64px;height:64px;background:#FFF8F8;border:2px solid #FFE4E6;border-radius:18px;box-shadow:0 10px 22px rgba(255,182,193,.25);animation:float 6s ease-in-out infinite}
+.critter::after{content:"";position:absolute;left:22px;top:26px;width:8px;height:8px;background:#8B6E4E;border-radius:50%;box-shadow:14px 0 0 #8B6E4E}
+.critter--bunny{left:10%;top:50px}
+.critter--cat{left:45%;top:20px;animation-delay:1.2s}
+.critter--fox{right:10%;top:70px;animation-delay:.6s}
+.critter--panda{left:18%;top:50px}
+.critter--hamster{right:18%;top:30px}
+.critter--dog{left:26%;top:40px}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-12px)}100%{transform:translateY(0)}}
+
+
+/* Docs */
+.doc h2{margin:6px 0 8px;font-size:28px}
+.doc h3{margin:18px 0 6px;font-size:20px}
+.doc p, .doc li{color:#5f6a55}
+
+
+/* Footer */
+.site-footer{color:#7d8d73;margin:8px 0 28px}
+.site-footer a{text-decoration:underline;color:var(--primary)}
+
+
+/* Responsive */
+@media (max-width:860px){
+.hero-grid{grid-template-columns:1fr}
+.brand-text h1{font-size:28px}
+}
