@@ -14,44 +14,21 @@
       box-sizing: border-box;
     }
     
-    :root {
-      --primary: #8B6E4E;
-      --secondary: #FFB6C1;
-      --tertiary: #AEDCB5;
-      --background: #F0EAE7;
-      --card-bg: #FFFFFF;
-      --text-dark: #2D3748;
-      --text-medium: #4A5568;
-      --text-light: #718096;
-      --accent: #F7FAFC;
-      --border: #E2E8F0;
-      --warning: #FFC107;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-      --gradient: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 100%);
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--gradient);
-      color: var(--text-dark);
+      background: #FAFBFC;
+      color: #2D3748;
       line-height: 1.6;
     }
     
     /* Header */
     .header {
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--border);
+      background: white;
+      border-bottom: 1px solid #E2E8F0;
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.95);
     }
     
     .header-content {
@@ -64,43 +41,43 @@
     }
     
     .back-link {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: var(--primary);
+      gap: 8px;
+      color: #8B6E4E;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.5rem 1rem;
+      padding: 8px 16px;
       border-radius: 8px;
       transition: background-color 0.2s;
     }
     
     .back-link:hover {
-      background: var(--accent);
+      background: #F7FAFC;
     }
     
-    .nav-links {
+    .nav {
       display: flex;
       gap: 2rem;
     }
     
-    .nav-links a {
-      color: var(--text-medium);
+    .nav a {
+      color: #4A5568;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.875rem;
-      padding: 0.5rem 1rem;
+      font-size: 15px;
+      padding: 8px 16px;
       border-radius: 8px;
       transition: all 0.2s;
     }
     
-    .nav-links a:hover {
-      color: var(--primary);
-      background: var(--accent);
+    .nav a:hover {
+      color: #8B6E4E;
+      background: #F7FAFC;
     }
     
-    .nav-links a.active {
-      background: var(--tertiary);
+    .nav a.active {
+      background: #AEDCB5;
       color: white;
     }
     
@@ -108,50 +85,53 @@
     .main-content {
       max-width: 800px;
       margin: 0 auto;
-      padding: 4rem 2rem;
+      padding: 60px 2rem;
     }
     
     .page-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 60px;
     }
     
     .page-title {
-      font-size: 3rem;
+      font-size: 40px;
       font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1rem;
+      color: #2D3748;
+      margin-bottom: 16px;
     }
     
     .page-subtitle {
-      font-size: 1.25rem;
-      color: var(--text-medium);
-      margin-bottom: 2rem;
+      font-size: 20px;
+      color: #4A5568;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .update-badge {
       display: inline-block;
-      background: var(--tertiary);
+      background: #AEDCB5;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 0.875rem;
+      font-size: 14px;
       font-weight: 600;
     }
     
     /* Policy Content */
     .policy-content {
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border);
+      background: white;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E2E8F0;
     }
     
     .policy-section {
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #E2E8F0;
     }
     
     .policy-section:last-child {
@@ -159,36 +139,25 @@
       margin-bottom: 0;
     }
     
-    .section-header {
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2D3748;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 12px;
     }
     
     .section-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--tertiary);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 24px;
-      color: white;
-    }
-    
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 0;
     }
     
     .policy-section p {
-      color: var(--text-medium);
-      margin-bottom: 1.5rem;
+      color: #4A5568;
+      margin-bottom: 16px;
       line-height: 1.7;
+      font-size: 16px;
     }
     
     .policy-section p:last-child {
@@ -196,102 +165,89 @@
     }
     
     .policy-section strong {
-      color: var(--text-dark);
+      color: #2D3748;
       font-weight: 600;
     }
     
     .highlight-box {
-      background: linear-gradient(135deg, rgba(174, 220, 181, 0.1), rgba(255, 182, 193, 0.1));
-      border: 1px solid var(--tertiary);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
+      background: #F0F8E7;
+      border: 1px solid #AEDCB5;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
     }
     
     .highlight-box p {
       margin: 0;
-      color: var(--text-dark);
+      color: #2D3748;
       font-weight: 500;
     }
     
     .warning-box {
-      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
-      border: 1px solid var(--warning);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
+      background: #FFF8E1;
+      border: 1px solid #FFC107;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
     }
     
     .warning-box p {
       margin: 0;
-      color: var(--text-dark);
+      color: #2D3748;
       font-weight: 500;
     }
     
     .contact-section {
-      background: var(--accent);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
+      background: #F7FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 32px;
       text-align: center;
-      margin-top: 3rem;
-    }
-    
-    .contact-icon {
-      width: 64px;
-      height: 64px;
-      background: var(--tertiary);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      margin: 0 auto 1.5rem;
-      color: white;
+      margin-top: 48px;
     }
     
     .contact-section h3 {
-      font-size: 1.5rem;
+      font-size: 20px;
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1rem;
+      color: #2D3748;
+      margin-bottom: 12px;
     }
     
     .contact-section p {
-      color: var(--text-medium);
-      margin-bottom: 1.5rem;
+      color: #4A5568;
+      margin-bottom: 20px;
     }
     
     .contact-email {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: var(--primary);
+      gap: 8px;
+      background: #8B6E4E;
       color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
+      padding: 12px 20px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       transition: transform 0.2s;
     }
     
     .contact-email:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
     
     .response-time {
-      font-size: 0.875rem;
-      color: var(--text-light);
-      margin-top: 1rem;
+      font-size: 14px;
+      color: #718096;
+      margin-top: 12px;
     }
     
     /* Footer */
     .footer {
-      background: var(--text-dark);
+      background: #2D3748;
       color: white;
-      padding: 2rem 0;
+      padding: 32px 0;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 60px;
     }
     
     .footer-content {
@@ -303,15 +259,15 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1rem;
+      gap: 32px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
     }
     
     .footer-links a {
       color: white;
       text-decoration: none;
-      opacity: 0.8;
+      opacity: 0.7;
       font-weight: 500;
       transition: opacity 0.2s;
     }
@@ -321,43 +277,37 @@
     }
     
     .footer-bottom {
-      opacity: 0.6;
-      font-size: 0.875rem;
+      opacity: 0.5;
+      font-size: 14px;
     }
     
-    /* Responsive Design */
+    /* Responsive */
     @media (max-width: 768px) {
       .header-content {
         padding: 0 1rem;
         flex-direction: column;
-        gap: 1rem;
+        gap: 12px;
       }
       
-      .nav-links {
+      .nav {
         gap: 1rem;
       }
       
       .main-content {
-        padding: 2rem 1rem;
+        padding: 40px 1rem;
       }
       
       .page-title {
-        font-size: 2.5rem;
+        font-size: 32px;
       }
       
       .policy-content {
-        padding: 2rem;
-      }
-      
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        padding: 32px 24px;
       }
       
       .footer-links {
         flex-direction: column;
-        gap: 1rem;
+        gap: 16px;
       }
     }
   </style>
@@ -369,10 +319,9 @@
       <a href="index.html" class="back-link">
         ← Back to Home
       </a>
-      <nav class="nav-links">
+      <nav class="nav">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html" class="active">Terms</a>
-        <a href="index.html#download">Download</a>
         <a href="mailto:critterlet@gmail.com">Support</a>
       </nav>
     </div>
@@ -388,10 +337,10 @@
 
     <div class="policy-content">
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">📋</div>
-          <h2 class="section-title">Agreement to Terms</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">📋</span>
+          Agreement to Terms
+        </h2>
         <p>These Terms and Conditions ("Terms") govern your use of Critterlet, a study application that helps you learn with adorable virtual companions. By downloading, installing, or using our app, you agree to be bound by these Terms.</p>
         <div class="highlight-box">
           <p><strong>Important:</strong> If you don't agree with any part of these terms, please don't use Critterlet. We want everyone to have a positive and safe study experience!</p>
@@ -399,10 +348,10 @@
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">📱</div>
-          <h2 class="section-title">License to Use</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">📱</span>
+          License to Use
+        </h2>
         <p>We grant you a limited, personal, non-exclusive, non-transferable license to download and use Critterlet on your personal devices for your own study and educational purposes.</p>
         <p><strong>You may not:</strong></p>
         <p>• Reverse engineer, decompile, or attempt to extract the source code</p>
@@ -412,10 +361,10 @@
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">👤</div>
-          <h2 class="section-title">Your Account Responsibilities</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">👤</span>
+          Your Account Responsibilities
+        </h2>
         <p>You are responsible for:</p>
         <p>• Keeping your account credentials secure and confidential</p>
         <p>• All activity that occurs under your account</p>
@@ -427,38 +376,38 @@
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">✍️</div>
-          <h2 class="section-title">Your Study Content</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">✍️</span>
+          Your Study Content
+        </h2>
         <p>You retain all rights to the study content you create in Critterlet, including flashcards, notes, to-do items, and other educational materials. We only process this content to provide our services to you.</p>
         <p>You grant us permission to store, sync, and backup your content across your devices so you can access it anywhere you study.</p>
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">💎</div>
-          <h2 class="section-title">Premium Features & Virtual Items</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">💎</span>
+          Premium Features & Virtual Items
+        </h2>
         <p><strong>Premium Subscriptions:</strong> Some features may require a premium subscription. Subscription fees are charged in advance and are non-refundable except as required by law.</p>
         <p><strong>Paw Points & Virtual Items:</strong> Paw Points are virtual currency earned through studying. Virtual items like critter accessories and backgrounds have no cash value and cannot be transferred or refunded.</p>
         <p><strong>Purchases:</strong> All purchases are final unless required by applicable law. If you experience issues with a purchase, contact us for assistance.</p>
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">⚠️</div>
-          <h2 class="section-title">App Availability & Changes</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">⚠️</span>
+          App Availability & Changes
+        </h2>
         <p>We strive to keep Critterlet available 24/7, but we cannot guarantee uninterrupted service. We may need to take the app offline for maintenance, updates, or other reasons.</p>
         <p>We may update, modify, or discontinue features to improve your experience. We'll do our best to notify you of significant changes in advance.</p>
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">🛡️</div>
-          <h2 class="section-title">Limitation of Liability</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">🛡️</span>
+          Limitation of Liability
+        </h2>
         <p>Critterlet is provided "as is" without warranties of any kind. While we work hard to provide a great study experience, we cannot guarantee that the app will always work perfectly or meet all your expectations.</p>
         <p>We are not liable for any indirect, incidental, or consequential damages arising from your use of the app, including lost study time or data.</p>
         <div class="warning-box">
@@ -467,10 +416,10 @@
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">🚫</div>
-          <h2 class="section-title">Prohibited Uses</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">🚫</span>
+          Prohibited Uses
+        </h2>
         <p>You agree not to use Critterlet to:</p>
         <p>• Harass, abuse, or harm other users</p>
         <p>• Violate any laws or regulations</p>
@@ -480,33 +429,32 @@
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">⛔</div>
-          <h2 class="section-title">Account Termination</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">⛔</span>
+          Account Termination
+        </h2>
         <p>We may suspend or terminate accounts that violate these Terms or engage in harmful behavior. You may also delete your account at any time through the app settings or by contacting us.</p>
         <p>Upon termination, your access to premium features will end, but you can export your study data before closing your account.</p>
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">📝</div>
-          <h2 class="section-title">Changes to Terms</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">📝</span>
+          Changes to Terms
+        </h2>
         <p>We may update these Terms from time to time to reflect changes in our services or applicable law. When we make changes, we'll post the updated Terms here and notify you through the app.</p>
         <p>Continued use of Critterlet after changes means you accept the new Terms.</p>
       </div>
 
       <div class="policy-section">
-        <div class="section-header">
-          <div class="section-icon">⚖️</div>
-          <h2 class="section-title">Governing Law</h2>
-        </div>
+        <h2 class="section-title">
+          <span class="section-icon">⚖️</span>
+          Governing Law
+        </h2>
         <p>These Terms are governed by the laws of Canada. Any disputes will be resolved in the courts of Canada, unless otherwise required by your local laws.</p>
       </div>
 
       <div class="contact-section">
-        <div class="contact-icon">📧</div>
         <h3>Questions About These Terms?</h3>
         <p>Our team is here to help clarify anything!</p>
         <a href="mailto:critterlet@gmail.com" class="contact-email">
@@ -523,7 +471,6 @@
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms & Conditions</a>
-        <a href="index.html#download">Download</a>
         <a href="mailto:critterlet@gmail.com">Support</a>
       </div>
       <div class="footer-bottom">

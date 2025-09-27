@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Critterlet — Cozy Study, Happy Critters</title>
-  <meta name="description" content="Transform your study sessions into magical adventures with adorable virtual pets that grow as you learn." />
+  <title>Critterlet — Privacy Policy & Terms</title>
+  <meta name="description" content="Privacy policy and terms of service for Critterlet - the study app that makes learning magical with virtual companions." />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
     * {
       margin: 0;
@@ -14,1531 +14,655 @@
       box-sizing: border-box;
     }
     
-    :root {
-      --primary: #8B6E4E;
-      --secondary: #FFB6C1;
-      --tertiary: #AEDCB5;
-      --background: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 50%, #F0F8E7 100%);
-      --card-bg: rgba(255, 255, 255, 0.9);
-      --text-dark: #8B6E4E;
-      --text-medium: #A6A6A6;
-      --text-light: #C7C7C7;
-      --accent-yellow: #F9E54E;
-      --accent-blue: #81D4FA;
-      --accent-peach: #FFDAB9;
-      --gold: #FFD700;
-      --shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
-      --glow: 0 0 30px rgba(255, 182, 193, 0.3);
-      --border-radius: 20px;
-      --border-radius-lg: 30px;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--background);
-      color: var(--text-dark);
-      overflow-x: hidden;
-      min-height: 100vh;
-      position: relative;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Floating Background Elements */
-    .floating-elements {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-    
-    .floating-critter {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: var(--card-bg);
-      border: 2px solid var(--secondary);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      animation: float 6s ease-in-out infinite;
-      backdrop-filter: blur(10px);
-    }
-    
-    .floating-critter::before {
-      content: '';
-      position: absolute;
-      left: 15px;
-      top: 20px;
-      width: 8px;
-      height: 8px;
-      background: var(--text-dark);
-      border-radius: 50%;
-      box-shadow: 16px 0 0 var(--text-dark);
-    }
-    
-    .floating-critter::after {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 35px;
-      width: 20px;
-      height: 8px;
-      background: var(--secondary);
-      border-radius: 10px;
-    }
-    
-    .floating-critter:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-    .floating-critter:nth-child(2) { left: 80%; top: 30%; animation-delay: 1.5s; }
-    .floating-critter:nth-child(3) { left: 15%; top: 70%; animation-delay: 3s; }
-    .floating-critter:nth-child(4) { left: 85%; top: 80%; animation-delay: 4.5s; }
-    .floating-critter:nth-child(5) { left: 50%; top: 10%; animation-delay: 2s; }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      25% { transform: translateY(-15px) rotate(1deg); }
-      50% { transform: translateY(-10px) rotate(0deg); }
-      75% { transform: translateY(-20px) rotate(-1deg); }
-    }
-    
-    /* Sparkle Effects */
-    .sparkles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 2;
-    }
-    
-    .sparkle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: var(--accent-yellow);
-      border-radius: 50%;
-      animation: sparkle 3s ease-in-out infinite;
-    }
-    
-    .sparkle:nth-child(1) { left: 20%; top: 25%; animation-delay: 0s; }
-    .sparkle:nth-child(2) { left: 60%; top: 15%; animation-delay: 0.5s; }
-    .sparkle:nth-child(3) { left: 80%; top: 45%; animation-delay: 1s; }
-    .sparkle:nth-child(4) { left: 30%; top: 75%; animation-delay: 1.5s; }
-    .sparkle:nth-child(5) { left: 70%; top: 85%; animation-delay: 2s; }
-    .sparkle:nth-child(6) { left: 90%; top: 25%; animation-delay: 2.5s; }
-    
-    @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+      background: #FAFBFC;
+      color: #2D3748;
+      line-height: 1.6;
     }
     
     /* Header */
-    .site-header {
-      position: relative;
-      z-index: 10;
-      background: linear-gradient(135deg, #FFF8E7 0%, #FFF5F5 100%);
-      border-bottom-left-radius: var(--border-radius-lg);
-      border-bottom-right-radius: var(--border-radius-lg);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
+    .header {
+      background: white;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     
     .header-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 100px;
     }
     
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
     }
     
-    .logo-container {
-      position: relative;
-    }
-    
-    .critter-logo {
-      width: 60px;
-      height: 60px;
-      background: var(--card-bg);
-      border: 3px solid var(--secondary);
-      border-radius: 50%;
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #8B6E4E, #FFB6C1);
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: logoHop 4s ease-in-out infinite;
-      box-shadow: var(--shadow);
-    }
-    
-    @keyframes logoHop {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
-    
-    .critter-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .eye {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: var(--text-dark);
-      border-radius: 50%;
-      top: 18px;
-      animation: blink 5s ease-in-out infinite;
-    }
-    
-    .eye.left { left: 16px; }
-    .eye.right { left: 32px; }
-    
-    @keyframes blink {
-      0%, 95%, 100% { transform: scaleY(1); }
-      97% { transform: scaleY(0.1); }
-    }
-    
-    .smile {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 10px;
-      border: 2px solid var(--secondary);
-      border-top: none;
-      border-radius: 0 0 20px 20px;
-    }
-    
-    .brand-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin: 0;
-      animation: titleGlow 3s ease-in-out infinite alternate;
-    }
-    
-    @keyframes titleGlow {
-      0% { text-shadow: 0 0 10px rgba(255, 182, 193, 0.3); }
-      100% { text-shadow: 0 0 20px rgba(255, 182, 193, 0.6); }
-    }
-    
-    .brand-tagline {
-      font-size: 1rem;
-      color: var(--tertiary);
-      margin: 5px 0 0;
-      font-weight: 500;
-    }
-    
-    .main-nav {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    
-    .nav-chip {
-      display: inline-block;
-      padding: 12px 16px;
-      border-radius: 25px;
-      background: rgba(255, 255, 255, 0.8);
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: 1px solid rgba(255, 228, 230, 0.8);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    
-    .nav-chip:hover {
-      background: var(--secondary);
       color: white;
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
+      font-weight: 700;
+      font-size: 14px;
     }
     
-    /* Main Content */
-    .main-content {
-      position: relative;
-      z-index: 5;
-      padding: 40px 20px;
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2D3748;
+    }
+    
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav a {
+      color: #4A5568;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    
+    .nav a:hover {
+      color: #8B6E4E;
     }
     
     /* Hero Section */
-    .hero-section {
-      padding: 60px 0;
+    .hero {
+      background: linear-gradient(135deg, #8B6E4E 0%, #5A4A3A 100%);
+      color: white;
+      padding: 80px 0;
       text-align: center;
-    }
-    
-    .hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 20px;
-      animation: slideInLeft 1s ease-out;
-    }
-    
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    
-    .hero-description {
-      font-size: 1.2rem;
-      color: var(--text-medium);
-      line-height: 1.6;
-      margin-bottom: 30px;
-      animation: slideInLeft 1s ease-out 0.2s both;
-    }
-    
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 30px;
-      animation: slideInLeft 1s ease-out 0.4s both;
-    }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 24px;
-      border-radius: var(--border-radius);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow);
-    }
-    
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255, 182, 193, 0.3);
-    }
-    
-    .btn-primary {
-      background: var(--secondary);
-      color: white;
-    }
-    
-    .btn-secondary {
-      background: var(--tertiary);
-      color: var(--text-dark);
-    }
-    
-    .btn-icon {
-      font-size: 1.2em;
-    }
-    
-    .hero-badges {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: slideInLeft 1s ease-out 0.6s both;
-    }
-    
-    .badge {
-      display: inline-block;
-      padding: 6px 12px;
-      background: var(--card-bg);
-      border: 1px solid var(--secondary);
-      border-radius: 15px;
-      font-size: 0.8rem;
-      color: var(--primary);
-      backdrop-filter: blur(10px);
-    }
-    
-    .badge.premium {
-      background: linear-gradient(45deg, var(--gold), #FFA500);
-      color: white;
-      border: none;
-    }
-    
-    /* Hero Visual */
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: slideInRight 1s ease-out 0.3s both;
-    }
-    
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    
-    .pet-container {
       position: relative;
-      width: 350px;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
     }
     
-    .pet-background {
+    .hero::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, var(--accent-peach), var(--accent-blue));
-      border-radius: 50%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
       opacity: 0.3;
-      animation: pulse 3s ease-in-out infinite;
     }
     
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.1); opacity: 0.5; }
-    }
-    
-    .main-critter {
-      width: 200px;
-      height: 200px;
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
       position: relative;
-      z-index: 3;
-      cursor: pointer;
-      animation: mainCritterFloat 4s ease-in-out infinite;
-    }
-    
-    .main-critter:hover {
-      animation: hop 0.6s ease-in-out;
-    }
-    
-    @keyframes mainCritterFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-    
-    @keyframes hop {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    .critter-body {
-      width: 100%;
-      height: 100%;
-      background: var(--card-bg);
-      border: 4px solid var(--secondary);
-      border-radius: 30px;
-      position: relative;
-      box-shadow: var(--shadow);
-    }
-    
-    .critter-ears {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    .ear {
-      position: absolute;
-      width: 30px;
-      height: 40px;
-      background: var(--secondary);
-      border-radius: 50% 50% 0 0;
-      border: 2px solid var(--secondary);
-    }
-    
-    .ear.left {
-      left: -25px;
-      transform: rotate(-20deg);
-    }
-    
-    .ear.right {
-      right: -25px;
-      transform: rotate(20deg);
-    }
-    
-    .nose {
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 8px;
-      height: 6px;
-      background: var(--secondary);
-      border-radius: 50%;
-    }
-    
-    .mouth {
-      position: absolute;
-      top: 75px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 15px;
-      border: 3px solid var(--secondary);
-      border-top: none;
-      border-radius: 0 0 30px 30px;
-    }
-    
-    .progress-ring {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       z-index: 1;
     }
     
-    .progress-ring svg {
-      transform: rotate(-90deg);
-    }
-    
-    .progress-background {
-      fill: none;
-      stroke: rgba(255, 182, 193, 0.2);
-      stroke-width: 8;
-    }
-    
-    .progress-bar {
-      fill: none;
-      stroke: var(--secondary);
-      stroke-width: 8;
-      stroke-linecap: round;
-      stroke-dasharray: 880;
-      stroke-dashoffset: 220;
-      animation: progressFill 3s ease-in-out infinite alternate;
-    }
-    
-    @keyframes progressFill {
-      0% { stroke-dashoffset: 440; }
-      100% { stroke-dashoffset: 220; }
-    }
-    
-    .xp-display {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    
-    .xp-number {
-      display: block;
-      font-size: 2rem;
+    .hero h1 {
+      font-size: 48px;
       font-weight: 800;
-      color: var(--primary);
-      animation: countUp 2s ease-out;
+      line-height: 1.1;
+      margin-bottom: 24px;
     }
     
-    .xp-label {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--text-medium);
-      font-weight: 500;
-    }
-    
-    @keyframes countUp {
-      from { opacity: 0; transform: scale(0.5); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    
-    /* Sections */
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 40px;
-      animation: fadeInUp 1s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Features Section */
-    .features-section {
-      padding: 80px 0;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: var(--border-radius-lg);
-      margin: 40px 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .feature-card {
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: var(--border-radius);
-      text-align: center;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      opacity: 0;
-      animation: slideInUp 0.6s ease-out forwards;
-      border: 1px solid rgba(255, 182, 193, 0.2);
-    }
-    
-    .feature-card[data-delay="0"] { animation-delay: 0.1s; }
-    .feature-card[data-delay="100"] { animation-delay: 0.2s; }
-    .feature-card[data-delay="200"] { animation-delay: 0.3s; }
-    .feature-card[data-delay="300"] { animation-delay: 0.4s; }
-    
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(255, 182, 193, 0.3);
-    }
-    
-    .feature-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-    
-    .feature-card h4 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-    
-    .feature-card p {
-      color: var(--text-medium);
-      line-height: 1.6;
-    }
-    
-    /* Stats Section */
-    .stats-section {
-      padding: 80px 0;
-      margin: 40px 20px;
-    }
-    
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .stat-card {
-      background: var(--card-bg);
-      padding: 30px 20px;
-      border-radius: var(--border-radius);
-      text-align: center;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 182, 193, 0.2);
-      backdrop-filter: blur(10px);
-      animation: statPop 0.6s ease-out;
-    }
-    
-    .stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(255, 182, 193, 0.3);
-    }
-    
-    @keyframes statPop {
-      0% { opacity: 0; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-    
-    .stat-icon {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      display: block;
-    }
-    
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 10px;
-      animation: numberCount 2s ease-out;
-    }
-    
-    .stat-label {
-      font-size: 0.9rem;
-      color: var(--text-medium);
-      font-weight: 500;
-    }
-    
-    @keyframes numberCount {
-      from { opacity: 0; transform: scale(0.5); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    
-    /* Download Section */
-    .download-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(174, 220, 181, 0.1));
-      border-radius: var(--border-radius-lg);
-      margin: 40px 20px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-    
-    .download-description {
-      font-size: 1.1rem;
-      color: var(--text-medium);
+    .hero p {
+      font-size: 20px;
+      opacity: 0.9;
       margin-bottom: 40px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
     
-    .download-buttons {
+    .cta-buttons {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       justify-content: center;
-      margin-bottom: 40px;
       flex-wrap: wrap;
     }
     
-    .download-btn {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 15px 25px;
-      background: var(--card-bg);
-      border: 2px solid var(--secondary);
-      border-radius: var(--border-radius);
+    .btn {
+      padding: 14px 24px;
+      border-radius: 8px;
       text-decoration: none;
-      color: var(--text-dark);
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow);
-      min-width: 200px;
-    }
-    
-    .download-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255, 182, 193, 0.3);
-      background: var(--secondary);
-      color: white;
-    }
-    
-    .btn-content {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      width: 100%;
-    }
-    
-    .btn-text {
-      text-align: left;
-    }
-    
-    .btn-text small {
-      display: block;
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
-    
-    .btn-text strong {
-      display: block;
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-    
-    .qr-section {
-      margin-top: 40px;
-    }
-    
-    .qr-code {
-      display: inline-block;
-      width: 150px;
-      height: 150px;
-      background: var(--card-bg);
-      border: 2px solid var(--secondary);
-      border-radius: var(--border-radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow);
-    }
-    
-    .qr-placeholder {
-      text-align: center;
-      color: var(--text-medium);
-    }
-    
-    .qr-placeholder span {
-      display: block;
       font-weight: 600;
-      margin-bottom: 5px;
-    }
-    
-    .qr-placeholder small {
-      font-size: 0.8rem;
-    }
-    
-    /* Contact Section */
-    .contact-section {
-      padding: 80px 0;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: var(--border-radius-lg);
-      margin: 40px 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-    }
-    
-    .contact-content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
+      font-size: 15px;
+      transition: all 0.2s;
+      display: inline-flex;
       align-items: center;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
+      gap: 8px;
     }
     
-    .contact-info p {
-      font-size: 1.1rem;
-      color: var(--text-medium);
-      margin-bottom: 15px;
+    .btn-primary {
+      background: white;
+      color: #8B6E4E;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* App Preview Section */
+    .app-preview {
+      padding: 80px 0;
+      background: white;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .app-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .app-info h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2D3748;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    
+    .app-info p {
+      font-size: 18px;
+      color: #4A5568;
+      margin-bottom: 32px;
       line-height: 1.6;
     }
     
-    .contact-email {
-      display: inline-block;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--secondary);
-      text-decoration: none;
-      margin: 20px 0;
-      padding: 15px 25px;
-      background: var(--card-bg);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
+    .features {
+      list-style: none;
+      margin-bottom: 32px;
     }
     
-    .contact-email:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255, 182, 193, 0.3);
-      background: var(--secondary);
-      color: white;
+    .features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #2D3748;
     }
     
-    .response-time {
-      font-size: 0.9rem !important;
-      color: var(--text-light) !important;
-      font-style: italic;
-    }
-    
-    .support-critter {
-      width: 80px;
-      height: 80px;
-      background: var(--card-bg);
-      border: 3px solid var(--tertiary);
+    .check {
+      width: 20px;
+      height: 20px;
+      background: #AEDCB5;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: supportFloat 3s ease-in-out infinite;
-      box-shadow: var(--shadow);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
     }
     
-    @keyframes supportFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
+    .app-visual {
+      text-align: center;
     }
     
-    .smile.big {
-      width: 25px;
-      height: 12px;
-      bottom: 20px;
+    .phone-mockup {
+      width: 280px;
+      height: 560px;
+      background: linear-gradient(135deg, #F7FAFC, #EDF2F7);
+      border-radius: 40px;
+      margin: 0 auto;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border: 8px solid #2D3748;
+    }
+    
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #FFB6C1, #AEDCB5);
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+    }
+    
+    .critter-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    
+    .app-name {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    
+    .app-tagline {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    /* Download Section */
+    .download {
+      padding: 80px 0;
+      background: #F7FAFC;
+      text-align: center;
+    }
+    
+    .download h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2D3748;
+      margin-bottom: 16px;
+    }
+    
+    .download p {
+      font-size: 18px;
+      color: #4A5568;
+      margin-bottom: 48px;
+    }
+    
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .download-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    
+    .app-store-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #000;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s;
+      min-width: 200px;
+    }
+    
+    .app-store-btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    .store-icon {
+      font-size: 24px;
+    }
+    
+    .store-text small {
+      display: block;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+    
+    .store-text strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    .coming-soon {
+      font-size: 14px;
+      color: #718096;
+      margin-top: 8px;
+    }
+    
+    .qr-section {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    
+    .qr-code {
+      width: 150px;
+      height: 150px;
+      background: #F7FAFC;
+      border: 2px solid #E2E8F0;
+      border-radius: 12px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #718096;
+      text-align: center;
+    }
+    
+    .qr-section h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2D3748;
+      margin-bottom: 8px;
+    }
+    
+    .qr-section p {
+      font-size: 14px;
+      color: #718096;
+    }
+    
+    /* Policy Cards Section */
+    .policies {
+      padding: 80px 0;
+      background: white;
+    }
+    
+    .policies h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2D3748;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .policy-card {
+      background: #F7FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    
+    .policy-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .policy-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #FFB6C1, #AEDCB5);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .policy-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2D3748;
+      margin-bottom: 12px;
+    }
+    
+    .policy-card p {
+      color: #4A5568;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    .policy-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #8B6E4E;
+      font-weight: 600;
+      font-size: 14px;
     }
     
     /* Footer */
-    .site-footer {
-      background: rgba(255, 255, 255, 0.8);
-      border-top: 1px solid rgba(255, 182, 193, 0.2);
-      padding: 30px 0;
+    .footer {
+      background: #2D3748;
+      color: white;
+      padding: 48px 0 32px;
       text-align: center;
-      backdrop-filter: blur(10px);
     }
     
-    .site-footer p {
-      color: var(--text-medium);
-      font-size: 0.9rem;
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
     
-    .site-footer a {
-      color: var(--primary);
+    .footer-brand {
+      margin-bottom: 32px;
+    }
+    
+    .footer-brand h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .footer-brand p {
+      opacity: 0.7;
+      font-size: 16px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
       text-decoration: none;
+      opacity: 0.7;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: opacity 0.2s;
     }
     
-    .site-footer a:hover {
-      color: var(--secondary);
+    .footer-links a:hover {
+      opacity: 1;
     }
     
-    /* Responsive Design */
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      opacity: 0.5;
+      font-size: 14px;
+    }
+    
+    /* Responsive */
     @media (max-width: 768px) {
-      .header-content {
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero p {
+        font-size: 18px;
+      }
+      
+      .app-content,
+      .download-grid,
+      .policy-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      
+      .nav {
+        display: none;
+      }
+      
+      .phone-mockup {
+        width: 240px;
+        height: 480px;
+      }
+      
+      .footer-links {
         flex-direction: column;
-        gap: 20px;
-        padding: 15px;
-      }
-      
-      .main-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-      
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .features-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-      }
-      
-      .download-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .contact-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      
-      .pet-container {
-        width: 300px;
-        height: 300px;
-      }
-      
-      .main-critter {
-        width: 150px;
-        height: 150px;
-      }
-      
-      .floating-critter {
-        width: 40px;
-        height: 40px;
-      }
-      
-      .floating-critter::before {
-        left: 10px;
-        top: 12px;
-        width: 5px;
-        height: 5px;
-        box-shadow: 10px 0 0 var(--text-dark);
-      }
-      
-      .floating-critter::after {
-        left: 12px;
-        top: 22px;
-        width: 16px;
-        height: 6px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .brand-title {
-        font-size: 2rem;
-      }
-      
-      .hero-title {
-        font-size: 2rem;
-      }
-      
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .main-content {
-        padding: 20px 10px;
-      }
-      
-      .container {
-        padding: 0 15px;
-      }
-    }
-    
-    /* Animation delays for staggered entrance */
-    .stat-card:nth-child(1) { animation-delay: 0.1s; }
-    .stat-card:nth-child(2) { animation-delay: 0.2s; }
-    .stat-card:nth-child(3) { animation-delay: 0.3s; }
-    .stat-card:nth-child(4) { animation-delay: 0.4s; }
-    
-    /* Accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-    
-    /* Focus states for accessibility */
-    .nav-chip:focus,
-    .btn:focus,
-    .download-btn:focus,
-    .contact-email:focus {
-      outline: 2px solid var(--secondary);
-      outline-offset: 2px;
-    }
-    
-    /* High contrast mode support */
-    @media (prefers-contrast: high) {
-      :root {
-        --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        --card-bg: #ffffff;
-      }
-      
-      .floating-critter,
-      .feature-card,
-      .stat-card {
-        border: 2px solid var(--text-dark);
+        gap: 16px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Floating Background Elements -->
-  <div class="floating-elements">
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-  </div>
-
-  <!-- Sparkle Effects -->
-  <div class="sparkles">
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-  </div>
-
-  <header class="site-header">
+  <!-- Header -->
+  <header class="header">
     <div class="header-content">
-      <div class="brand">
-        <div class="logo-container">
-          <div class="critter-logo">
-            <div class="critter-face">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="smile"></div>
-            </div>
-          </div>
-        </div>
-        <div class="brand-text">
-          <h1 class="brand-title">Critterlet</h1>
-          <p class="brand-tagline">Cozy study, happy critters.</p>
-        </div>
-      </div>
-      
-      <nav class="main-nav">
-        <a href="privacy.html" class="nav-chip">Privacy Policy</a>
-        <a href="terms.html" class="nav-chip">Terms & Conditions</a>
-        <a href="#download" class="nav-chip">Download</a>
-        <a href="#contact" class="nav-chip">Contact</a>
+      <a href="#" class="logo">
+        <div class="logo-icon">C</div>
+        <span class="logo-text">Critterlet</span>
+      </a>
+      <nav class="nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:critterlet@gmail.com">Support</a>
       </nav>
     </div>
   </header>
 
-  <main class="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h2 class="hero-title">Welcome to Critterlet</h2>
-            <p class="hero-description">Transform your study sessions into magical adventures! Watch adorable critters grow as you learn, track your progress with cozy stats, and make studying the highlight of your day.</p>
-            
-            <div class="hero-buttons">
-              <a href="privacy.html" class="btn btn-primary">
-                <span class="btn-icon">📋</span>
-                Privacy Policy
-              </a>
-              <a href="terms.html" class="btn btn-secondary">
-                <span class="btn-icon">📄</span>
-                Terms
-              </a>
-            </div>
-            
-            <div class="hero-badges">
-              <span class="badge">Last updated: 2025-09-26</span>
-              <span class="badge">HTTPS Ready</span>
-              <span class="badge premium">Study Safe</span>
-            </div>
-          </div>
-          
-          <div class="hero-visual">
-            <div class="pet-container">
-              <div class="pet-background"></div>
-              <div class="main-critter" id="mainCritter">
-                <div class="critter-body">
-                  <div class="critter-face">
-                    <div class="eye left"></div>
-                    <div class="eye right"></div>
-                    <div class="nose"></div>
-                    <div class="mouth"></div>
-                  </div>
-                  <div class="critter-ears">
-                    <div class="ear left"></div>
-                    <div class="ear right"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="progress-ring">
-                <svg width="300" height="300">
-                  <circle cx="150" cy="150" r="140" class="progress-background"/>
-                  <circle cx="150" cy="150" r="140" class="progress-bar" id="progressCircle"/>
-                </svg>
-                <div class="xp-display">
-                  <span class="xp-number" id="xpNumber">1,247</span>
-                  <span class="xp-label">XP Earned</span>
-                </div>
-              </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Privacy & Terms for<br>Your Study Companion</h1>
+      <p>Everything you need to know about how we protect your data and the terms of using Critterlet.</p>
+      <div class="cta-buttons">
+        <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
+        <a href="terms.html" class="btn btn-secondary">Terms & Conditions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview -->
+  <section class="app-preview">
+    <div class="container">
+      <div class="app-content">
+        <div class="app-info">
+          <h2>Study with magical virtual companions</h2>
+          <p>Critterlet transforms your study sessions into engaging adventures. Our privacy-first approach ensures your learning data stays secure while you build lasting study habits.</p>
+          <ul class="features">
+            <li><span class="check">✓</span>Privacy-first design protecting your study data</li>
+            <li><span class="check">✓</span>Transparent data practices with clear policies</li>
+            <li><span class="check">✓</span>Student-focused terms that are easy to understand</li>
+            <li><span class="check">✓</span>Safe and secure learning environment</li>
+          </ul>
+        </div>
+        <div class="app-visual">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="critter-icon">🐾</div>
+              <div class="app-name">Critterlet</div>
+              <div class="app-tagline">Study companion</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="container">
-        <h3 class="section-title">Why Students Love Critterlet</h3>
-        <div class="features-grid">
-          <div class="feature-card" data-delay="0">
-            <div class="feature-icon">🐾</div>
-            <h4>Adorable Companions</h4>
-            <p>Choose from foxes, bunnies, pandas, and more! Watch them evolve as you study.</p>
-          </div>
-          <div class="feature-card" data-delay="100">
-            <div class="feature-icon">📊</div>
-            <h4>Progress Tracking</h4>
-            <p>Beautiful visualizations of your study streaks, time spent, and achievements.</p>
-          </div>
-          <div class="feature-card" data-delay="200">
-            <div class="feature-icon">🎯</div>
-            <h4>Study Goals</h4>
-            <p>Set daily targets and build consistent habits with gentle reminders.</p>
-          </div>
-          <div class="feature-card" data-delay="300">
-            <div class="feature-icon">🛍️</div>
-            <h4>Customize & Collect</h4>
-            <p>Earn Paw Points to buy accessories, backgrounds, and special items.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-      <div class="container">
-        <h3 class="section-title">Your Study Journey</h3>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon">⏰</div>
-            <div class="stat-number">2h 30m</div>
-            <div class="stat-label">Today's Study Time</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">🔥</div>
-            <div class="stat-number">7 days</div>
-            <div class="stat-label">Current Streak</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">✅</div>
-            <div class="stat-number">12</div>
-            <div class="stat-label">Tasks Completed</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon">🏆</div>
-            <div class="stat-number">847</div>
-            <div class="stat-label">Paw Points</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download-section">
-      <div class="container">
-        <h3 class="section-title">Get Critterlet</h3>
-        <p class="download-description">Available soon on App Store and Google Play. Join thousands of students making study time magical!</p>
-        
+  <!-- Download -->
+  <section class="download">
+    <div class="container">
+      <h2>Scan to download the app</h2>
+      <p>Get Critterlet on your iPhone and start your magical study journey</p>
+      <div class="download-grid">
         <div class="download-buttons">
-          <a href="#" class="download-btn app-store">
-            <div class="btn-content">
-              <span class="btn-icon">📱</span>
-              <div class="btn-text">
-                <small>Download on the</small>
-                <strong>App Store</strong>
-              </div>
+          <a href="#" class="app-store-btn">
+            <span class="store-icon">📱</span>
+            <div class="store-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
             </div>
           </a>
-          <a href="#" class="download-btn google-play">
-            <div class="btn-content">
-              <span class="btn-icon">🤖</span>
-              <div class="btn-text">
-                <small>Get it on</small>
-                <strong>Google Play</strong>
-              </div>
-            </div>
-          </a>
+          <p class="coming-soon">Coming Soon</p>
         </div>
-        
         <div class="qr-section">
           <div class="qr-code">
-            <div class="qr-placeholder">
-              <span>QR Code</span>
-              <small>Scan to download</small>
-            </div>
+            QR Code<br><small>Scan to Download</small>
           </div>
+          <h3>Scan to download</h3>
+          <p>Point your camera at the QR code</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h3 class="section-title">Get in Touch</h3>
-        <div class="contact-content">
-          <div class="contact-info">
-            <p>Questions about your data or need support?</p>
-            <a href="mailto:critterlet@gmail.com" class="contact-email">critterlet@gmail.com</a>
-            <p class="response-time">We typically respond within 3-5 business days.</p>
-          </div>
-          <div class="contact-critter">
-            <div class="support-critter">
-              <div class="critter-face">
-                <div class="eye left"></div>
-                <div class="eye right"></div>
-                <div class="smile big"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
+  <!-- Policy Cards -->
+  <section class="policies">
     <div class="container">
-      <p>&copy; 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="#download">Download</a></p>
+      <h2>Legal Information</h2>
+      <div class="policy-grid">
+        <a href="privacy.html" class="policy-card">
+          <div class="policy-icon">🛡</div>
+          <h3>Privacy Policy</h3>
+          <p>Learn how we collect, use, and protect your personal information while you study with your virtual critters.</p>
+          <span class="policy-link">Read Privacy Policy →</span>
+        </a>
+        <a href="terms.html" class="policy-card">
+          <div class="policy-icon">📋</div>
+          <h3>Terms & Conditions</h3>
+          <p>Understand the terms of service for using Critterlet. Written in clear, student-friendly language.</p>
+          <span class="policy-link">View Terms →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Critterlet</h3>
+        <p>Making study time magical</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="mailto:critterlet@gmail.com">Support</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Critterlet. All rights reserved.</p>
+      </div>
     </div>
   </footer>
-
-  <script>
-    // Critterlet Website Interactive Features
-    (function() {
-        'use strict';
-        
-        // Wait for DOM to be ready
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeAnimations();
-            initializeInteractions();
-            initializeScrollEffects();
-            initializeParallax();
-            initializeCounters();
-        });
-
-        // Initialize entrance animations
-        function initializeAnimations() {
-            // Add ready class to body for CSS animations
-            setTimeout(() => {
-                document.body.classList.add('ready');
-            }, 100);
-
-            // Staggered animation for feature cards
-            const featureCards = document.querySelectorAll('.feature-card');
-            featureCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1 + 0.2}s`;
-            });
-
-            // Staggered animation for stat cards
-            const statCards = document.querySelectorAll('.stat-card');
-            statCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1 + 0.1}s`;
-            });
-        }
-
-        // Initialize interactive elements
-        function initializeInteractions() {
-            // Main critter click interaction
-            const mainCritter = document.getElementById('mainCritter');
-            if (mainCritter) {
-                mainCritter.addEventListener('click', function() {
-                    this.style.animation = 'hop 0.6s ease-in-out';
-                    
-                    // Create sparkle effect
-                    createSparkleEffect(this);
-                    
-                    // Reset animation
-                    setTimeout(() => {
-                        this.style.animation = 'mainCritterFloat 4s ease-in-out infinite';
-                    }, 600);
-                });
-            }
-
-            // Smooth scrolling for navigation links
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Initialize scroll-based effects
-        function initializeScrollEffects() {
-            // Intersection Observer for animations on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                        
-                        // Trigger counter animation for stat cards
-                        if (entry.target.classList.contains('stat-card')) {
-                            animateCounter(entry.target);
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            // Observe elements for scroll animations
-            const animatedElements = document.querySelectorAll('.feature-card, .stat-card, .section-title');
-            animatedElements.forEach(el => observer.observe(el));
-
-            // Parallax effect for floating elements
-            window.addEventListener('scroll', throttle(updateParallax, 16));
-        }
-
-        // Initialize parallax effects
-        function initializeParallax() {
-            const floatingCritters = document.querySelectorAll('.floating-critter');
-            const sparkles = document.querySelectorAll('.sparkle');
-            
-            window.addEventListener('scroll', throttle(() => {
-                const scrolled = window.pageYOffset;
-                
-                floatingCritters.forEach((critter, index) => {
-                    const speed = 0.2 + (index * 0.1);
-                    critter.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-                
-                sparkles.forEach((sparkle, index) => {
-                    const speed = 0.1 + (index * 0.05);
-                    sparkle.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-            }, 16));
-        }
-
-        // Initialize number counters
-        function initializeCounters() {
-            const xpNumber = document.getElementById('xpNumber');
-            if (xpNumber) {
-                // Animate XP counter on page load
-                setTimeout(() => {
-                    animateNumber(xpNumber, 0, 1247, 2000);
-                }, 1000);
-            }
-        }
-
-        // Update parallax elements
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            
-            // Update floating elements
-            const floatingElements = document.querySelectorAll('.floating-critter, .sparkle');
-            floatingElements.forEach((element, index) => {
-                const speed = 0.1 + (index * 0.02);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
-            });
-        }
-
-        // Animate counter numbers
-        function animateCounter(card) {
-            const numberElement = card.querySelector('.stat-number');
-            if (!numberElement || numberElement.dataset.animated) return;
-            
-            numberElement.dataset.animated = 'true';
-            const text = numberElement.textContent;
-            const number = parseInt(text.replace(/\D/g, ''), 10);
-            
-            if (number && number > 0) {
-                animateNumber(numberElement, 0, number, 1500, text.replace(/\d+/, ''));
-            }
-        }
-
-        // Animate number counting
-        function animateNumber(element, start, end, duration, suffix = '') {
-            const startTime = performance.now();
-            const difference = end - start;
-            
-            function updateNumber(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function
-                const easedProgress = easeOutQuart(progress);
-                const current = Math.floor(start + (difference * easedProgress));
-                
-                element.textContent = current + suffix;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(updateNumber);
-                } else {
-                    element.textContent = end + suffix;
-                }
-            }
-            
-            requestAnimationFrame(updateNumber);
-        }
-
-        // Create sparkle effect
-        function createSparkleEffect(element) {
-            const rect = element.getBoundingClientRect();
-            const sparkleCount = 8;
-            
-            for (let i = 0; i < sparkleCount; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'temp-sparkle';
-                sparkle.style.cssText = `
-                    position: fixed;
-                    width: 6px;
-                    height: 6px;
-                    background: var(--accent-yellow);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 1000;
-                    left: ${rect.left + rect.width / 2}px;
-                    top: ${rect.top + rect.height / 2}px;
-                `;
-                
-                document.body.appendChild(sparkle);
-                
-                // Animate sparkle
-                const angle = (360 / sparkleCount) * i;
-                const distance = 60 + Math.random() * 40;
-                const endX = Math.cos(angle * Math.PI / 180) * distance;
-                const endY = Math.sin(angle * Math.PI / 180) * distance;
-                
-                sparkle.animate([
-                    {
-                        transform: 'translate(0, 0) scale(0)',
-                        opacity: 1
-                    },
-                    {
-                        transform: `translate(${endX}px, ${endY}px) scale(1)`,
-                        opacity: 0
-                    }
-                ], {
-                    duration: 800,
-                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-                }).onfinish = () => {
-                    sparkle.remove();
-                };
-            }
-        }
-
-        // Easing function
-        function easeOutQuart(t) {
-            return 1 - (--t) * t * t * t;
-        }
-
-        // Throttle function for performance
-        function throttle(func, limit) {
-            let inThrottle;
-            return function() {
-                const args = arguments;
-                const context = this;
-                if (!inThrottle) {
-                    func.apply(context, args);
-                    inThrottle = true;
-                    setTimeout(() => inThrottle = false, limit);
-                }
-            };
-        }
-
-    })();
-  </script>
 </body>
 </html>
