@@ -8,6 +8,14 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
+    @font-face {
+      font-family: 'Switzal';
+      src: url('Switzal.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    
     * {
       margin: 0;
       padding: 0;
@@ -15,10 +23,42 @@
     }
     
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Switzal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #FAFBFC;
       color: #2D3748;
       line-height: 1.6;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
     }
     
     /* Header */
@@ -29,6 +69,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
     }
     
     .header-content {
@@ -49,11 +91,13 @@
       font-weight: 600;
       padding: 8px 16px;
       border-radius: 8px;
-      transition: background-color 0.2s;
+      transition: all 0.3s ease;
+      animation: slideInLeft 0.8s ease-out;
     }
     
     .back-link:hover {
       background: #F7FAFC;
+      transform: translateX(-5px);
     }
     
     .nav {
@@ -68,17 +112,19 @@
       font-size: 15px;
       padding: 8px 16px;
       border-radius: 8px;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
     }
     
     .nav a:hover {
       color: #8B6E4E;
       background: #F7FAFC;
+      transform: translateY(-2px);
     }
     
     .nav a.active {
       background: #AEDCB5;
       color: white;
+      animation: pulse 2s ease-in-out infinite;
     }
     
     /* Main Content */
@@ -91,6 +137,7 @@
     .page-header {
       text-align: center;
       margin-bottom: 60px;
+      animation: fadeInUp 1s ease-out;
     }
     
     .page-title {
@@ -107,6 +154,7 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      animation: fadeInUp 1s ease-out 0.2s both;
     }
     
     .update-badge {
@@ -117,6 +165,7 @@
       border-radius: 20px;
       font-size: 14px;
       font-weight: 600;
+      animation: fadeInUp 1s ease-out 0.4s both;
     }
     
     /* Policy Content */
@@ -126,13 +175,26 @@
       padding: 48px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border: 1px solid #E2E8F0;
+      animation: fadeInUp 1s ease-out 0.6s both;
     }
     
     .policy-section {
       margin-bottom: 48px;
       padding-bottom: 32px;
       border-bottom: 1px solid #E2E8F0;
+      animation: fadeInUp 0.8s ease-out forwards;
     }
+    
+    .policy-section:nth-child(1) { animation-delay: 0.1s; }
+    .policy-section:nth-child(2) { animation-delay: 0.2s; }
+    .policy-section:nth-child(3) { animation-delay: 0.3s; }
+    .policy-section:nth-child(4) { animation-delay: 0.4s; }
+    .policy-section:nth-child(5) { animation-delay: 0.5s; }
+    .policy-section:nth-child(6) { animation-delay: 0.6s; }
+    .policy-section:nth-child(7) { animation-delay: 0.7s; }
+    .policy-section:nth-child(8) { animation-delay: 0.8s; }
+    .policy-section:nth-child(9) { animation-delay: 0.9s; }
+    .policy-section:nth-child(10) { animation-delay: 1.0s; }
     
     .policy-section:last-child {
       border-bottom: none;
@@ -151,6 +213,7 @@
     
     .section-icon {
       font-size: 24px;
+      animation: pulse 2s ease-in-out infinite;
     }
     
     .policy-section p {
@@ -175,6 +238,7 @@
       border-radius: 8px;
       padding: 20px;
       margin: 20px 0;
+      animation: pulse 3s ease-in-out infinite;
     }
     
     .highlight-box p {
@@ -189,6 +253,7 @@
       border-radius: 8px;
       padding: 20px;
       margin: 20px 0;
+      animation: pulse 3s ease-in-out infinite;
     }
     
     .warning-box p {
@@ -204,6 +269,7 @@
       padding: 32px;
       text-align: center;
       margin-top: 48px;
+      animation: fadeInUp 1s ease-out 0.8s both;
     }
     
     .contact-section h3 {
@@ -228,11 +294,12 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
     }
     
     .contact-email:hover {
-      transform: translateY(-1px);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(139, 110, 78, 0.4);
     }
     
     .response-time {
@@ -269,11 +336,15 @@
       text-decoration: none;
       opacity: 0.7;
       font-weight: 500;
-      transition: opacity 0.2s;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 8px;
     }
     
     .footer-links a:hover {
       opacity: 1;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
     }
     
     .footer-bottom {
@@ -322,6 +393,7 @@
       <nav class="nav">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html" class="active">Terms</a>
+        <a href="pricing.html">Premium</a>
         <a href="mailto:critterlet@gmail.com">Support</a>
       </nav>
     </div>
@@ -377,7 +449,7 @@
 
       <div class="policy-section">
         <h2 class="section-title">
-          <span class="section-icon">✍️</span>
+          <span class="section-icon">✏️</span>
           Your Study Content
         </h2>
         <p>You retain all rights to the study content you create in Critterlet, including flashcards, notes, to-do items, and other educational materials. We only process this content to provide our services to you.</p>
@@ -471,6 +543,7 @@
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms & Conditions</a>
+        <a href="pricing.html">Premium</a>
         <a href="mailto:critterlet@gmail.com">Support</a>
       </div>
       <div class="footer-bottom">
