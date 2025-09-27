@@ -5,19 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Critterlet — Privacy Policy</title>
   <meta name="description" content="How Critterlet collects, uses, and protects your data while you study with your virtual critters." />
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Additional styles for policy pages */
-    .policy-page {
-      background: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 100%);
-      min-height: 100vh;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     
+    :root {
+      --primary: #8B6E4E;
+      --secondary: #FFB6C1;
+      --tertiary: #AEDCB5;
+      --background: linear-gradient(135deg, #F0EAE7 0%, #FFF5F5 100%);
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --text-dark: #8B6E4E;
+      --text-medium: #A6A6A6;
+      --text-light: #C7C7C7;
+      --accent-yellow: #F9E54E;
+      --gold: #FFD700;
+      --shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      --border-radius: 20px;
+      --border-radius-lg: 30px;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--background);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    /* Floating Background Elements */
+    .floating-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .floating-critter {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: var(--card-bg);
+      border: 2px solid var(--secondary);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      animation: float 6s ease-in-out infinite;
+      backdrop-filter: blur(10px);
+    }
+    
+    .floating-critter::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 20px;
+      width: 8px;
+      height: 8px;
+      background: var(--text-dark);
+      border-radius: 50%;
+      box-shadow: 16px 0 0 var(--text-dark);
+    }
+    
+    .floating-critter::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 35px;
+      width: 20px;
+      height: 8px;
+      background: var(--secondary);
+      border-radius: 10px;
+    }
+    
+    .floating-critter:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+    .floating-critter:nth-child(2) { left: 80%; top: 30%; animation-delay: 1.5s; }
+    .floating-critter:nth-child(3) { left: 15%; top: 70%; animation-delay: 3s; }
+    .floating-critter:nth-child(4) { left: 85%; top: 80%; animation-delay: 4.5s; }
+    .floating-critter:nth-child(5) { left: 50%; top: 10%; animation-delay: 2s; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-15px) rotate(1deg); }
+      50% { transform: translateY(-10px) rotate(0deg); }
+      75% { transform: translateY(-20px) rotate(-1deg); }
+    }
+    
+    /* Sparkle Effects */
+    .sparkles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--accent-yellow);
+      border-radius: 50%;
+      animation: sparkle 3s ease-in-out infinite;
+    }
+    
+    .sparkle:nth-child(1) { left: 20%; top: 25%; animation-delay: 0s; }
+    .sparkle:nth-child(2) { left: 60%; top: 15%; animation-delay: 0.5s; }
+    .sparkle:nth-child(3) { left: 80%; top: 45%; animation-delay: 1s; }
+    .sparkle:nth-child(4) { left: 30%; top: 75%; animation-delay: 1.5s; }
+    .sparkle:nth-child(5) { left: 70%; top: 85%; animation-delay: 2s; }
+    .sparkle:nth-child(6) { left: 90%; top: 25%; animation-delay: 2.5s; }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+    }
+    
+    /* Header */
     .policy-header {
+      position: relative;
+      z-index: 10;
       background: linear-gradient(135deg, #FFF8E7 0%, #FFF5F5 100%);
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+      border-bottom-left-radius: var(--border-radius-lg);
+      border-bottom-right-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
       margin-bottom: 40px;
     }
     
@@ -51,6 +175,33 @@
       transform: translateY(-2px);
     }
     
+    .main-nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .nav-chip {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 228, 230, 0.8);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .nav-chip:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    
     .policy-title-section {
       text-align: center;
       padding: 40px 20px;
@@ -64,326 +215,9 @@
       animation: slideInUp 1s ease-out;
     }
     
-    .policy-subtitle {
-      font-size: 1.2rem;
-      color: var(--text-medium);
-      max-width: 600px;
-      margin: 0 auto;
-      animation: slideInUp 1s ease-out 0.2s both;
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     
-    .policy-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
-    }
-    
-    .policy-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 25px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 182, 193, 0.2);
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
-    
-    .update-badge {
-      display: inline-block;
-      background: linear-gradient(45deg, var(--gold), #FFA500);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-    }
-    
-    .policy-section {
-      margin-bottom: 35px;
-      padding-bottom: 25px;
-      border-bottom: 1px solid rgba(255, 182, 193, 0.2);
-    }
-    
-    .policy-section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-    }
-    
-    .policy-section h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .section-icon {
-      width: 30px;
-      height: 30px;
-      background: var(--secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-    }
-    
-    .policy-section p {
-      color: var(--text-medium);
-      line-height: 1.7;
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-    
-    .policy-section p:last-child {
-      margin-bottom: 0;
-    }
-    
-    .highlight-box {
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(174, 220, 181, 0.1));
-      border: 1px solid var(--secondary);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    
-    .highlight-box p {
-      margin-bottom: 10px;
-      color: var(--text-dark);
-      font-weight: 500;
-    }
-    
-    .contact-box {
-      background: var(--card-bg);
-      border: 2px solid var(--tertiary);
-      border-radius: 20px;
-      padding: 25px;
-      text-align: center;
-      margin-top: 30px;
-      box-shadow: 0 8px 25px rgba(174, 220, 181, 0.2);
-    }
-    
-    .contact-critter {
-      width: 60px;
-      height: 60px;
-      background: var(--card-bg);
-      border: 3px solid var(--tertiary);
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: float 3s ease-in-out infinite;
-    }
-    
-    .contact-email-link {
-      display: inline-block;
-      color: var(--secondary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 12px 20px;
-      background: rgba(255, 182, 193, 0.1);
-      border-radius: 15px;
-      margin: 10px 0;
-      transition: all 0.3s ease;
-    }
-    
-    .contact-email-link:hover {
-      background: var(--secondary);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    @media (max-width: 768px) {
-      .policy-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .policy-title {
-        font-size: 2.2rem;
-      }
-      
-      .policy-card {
-        padding: 25px;
-        margin: 0 10px;
-      }
-      
-      .policy-section h3 {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
-</head>
-<body class="policy-page">
-  <!-- Floating Background Elements -->
-  <div class="floating-elements">
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-    <div class="floating-critter"></div>
-  </div>
-
-  <!-- Sparkle Effects -->
-  <div class="sparkles">
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-    <div class="sparkle"></div>
-  </div>
-
-  <header class="policy-header">
-    <nav class="policy-nav">
-      <a href="index.html" class="back-link">
-        ← Back to Home
-      </a>
-      <div class="main-nav">
-        <a href="privacy.html" class="nav-chip" style="background: var(--secondary); color: white;">Privacy</a>
-        <a href="terms.html" class="nav-chip">Terms</a>
-        <a href="index.html#download" class="nav-chip">Download</a>
-        <a href="index.html#contact" class="nav-chip">Contact</a>
-      </div>
-    </nav>
-    
-    <div class="policy-title-section">
-      <h1 class="policy-title">Privacy Policy</h1>
-      <p class="policy-subtitle">How we collect, use, and protect your data while you study with your virtual critters</p>
-    </div>
-  </header>
-
-  <main class="policy-content">
-    <div class="policy-card">
-      <div class="update-badge">Last updated: September 26, 2025</div>
-      
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">🛡️</div>
-          Overview
-        </h3>
-        <p>Critterlet ("we", "us", "our") is a study app designed to make learning magical with adorable virtual companions. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you use Critterlet.</p>
-        <div class="highlight-box">
-          <p><strong>Our Promise:</strong> We believe your privacy is fundamental to building trust. We only collect what's necessary to make your study experience amazing, and we never sell your personal information.</p>
-        </div>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">📊</div>
-          Information We Collect
-        </h3>
-        <p><strong>Account Information:</strong> When you create an account, we collect your name and email address to personalize your experience and sync your progress across devices.</p>
-        <p><strong>Study Data:</strong> We track your study sessions, streaks, session length, and completed tasks to help you visualize your progress and keep your critters happy and growing.</p>
-        <p><strong>App Usage:</strong> We collect basic diagnostics like app version, operating system, and crash logs to fix bugs and improve performance.</p>
-        <p><strong>Study Content:</strong> Any flashcards, to-do items, or notes you create are stored securely to sync across your devices. This content remains private to you.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">⚙️</div>
-          How We Use Your Information
-        </h3>
-        <p>We use your information to:</p>
-        <p>• <strong>Personalize your experience</strong> by showing your study progress, critter evolution, and achievements</p>
-        <p>• <strong>Sync your data</strong> across all your devices so you can study anywhere</p>
-        <p>• <strong>Send helpful notifications</strong> about study streaks, critter needs, and app updates</p>
-        <p>• <strong>Improve our app</strong> by analyzing usage patterns and fixing technical issues</p>
-        <p>• <strong>Provide customer support</strong> when you need help with your account or technical issues</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">🤝</div>
-          Sharing and Processing
-        </h3>
-        <p>We work with trusted service providers for cloud hosting, analytics, and crash reporting to keep Critterlet running smoothly. These partners are contractually required to protect your data and only use it for the services they provide us.</p>
-        <div class="highlight-box">
-          <p><strong>We never sell your information.</strong> Your study data, personal information, and content remain private and are never shared for advertising or marketing purposes.</p>
-        </div>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">🗂️</div>
-          Data Retention
-        </h3>
-        <p>We keep your data while you have an active account and for a reasonable period afterward as needed for legal or business purposes. You can request deletion of your account and data at any time by contacting us.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">✋</div>
-          Your Rights
-        </h3>
-        <p>You have the right to:</p>
-        <p>• <strong>Access</strong> your personal data and study information</p>
-        <p>• <strong>Correct</strong> any inaccurate information in your account</p>
-        <p>• <strong>Delete</strong> your account and associated data</p>
-        <p>• <strong>Export</strong> your study data and content</p>
-        <p>To exercise these rights, simply email us at the address below, and we'll help you right away.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">👶</div>
-          Children's Privacy
-        </h3>
-        <p>Critterlet is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will delete it immediately.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">🌍</div>
-          International Users
-        </h3>
-        <p>We process data in Canada and other countries as needed to provide our services. We comply with applicable privacy laws including GDPR, CCPA, and other regional regulations to protect your privacy rights.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">🔒</div>
-          Security
-        </h3>
-        <p>We employ industry-standard security measures including encryption, secure servers, and regular security audits to protect your information. However, no system is 100% secure, and we cannot guarantee absolute security.</p>
-      </div>
-
-      <div class="policy-section">
-        <h3>
-          <div class="section-icon">📝</div>
-          Policy Updates
-        </h3>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make changes, we'll post the updated policy here and notify you through the app or by email.</p>
-      </div>
-
-      <div class="contact-box">
-        <div class="contact-critter">
-          <div class="critter-face">
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-            <div class="smile"></div>
-          </div>
-        </div>
-        <h3>Questions About Your Privacy?</h3>
-        <p>We're here to help! Contact our friendly support team:</p>
-        <a href="mailto:critterlet@gmail.com" class="contact-email-link">critterlet@gmail.com</a>
-        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 15px;">We typically respond within 3-5 business days</p>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Critterlet • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="index.html#download">Download</a></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    .
